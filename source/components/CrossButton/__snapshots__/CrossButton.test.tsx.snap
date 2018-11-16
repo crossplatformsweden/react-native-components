@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossButton /> With title should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    color="#349b34"
+    disabled={false}
+    icon={[Function]}
+    iconName="home"
+    mode="text"
+    onPress={[MockFunction]}
+    style={
+      Object {
+        "height": 45,
+        "marginRight": 10,
+      }
+    }
+    title="home"
+  >
+    home
+  </View>
+</View>
+`;
+
+exports[`components <CrossButton /> Without title should renders 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    color="#2f2f2f"
+    iconName="map"
+    name="map"
+    onPress={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
