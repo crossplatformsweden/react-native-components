@@ -56,6 +56,7 @@ buck-out/
 
 **/build/
 **/dist/
+**/lib
 
 # Xcode
 !**/*.xcodeproj
