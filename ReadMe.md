@@ -4,7 +4,7 @@
 
 # Crossplatform React-Native-Core
 
-Beautiful React-Native components using [RN Paper by Callstack](https://github.com/callstack/react-native-paper).
+Beautiful React-Native components using [RN Paper by Callstack](https://github.com/callstack/react-native-paper). If using a paper provider your theme should be applied to all the components.
 
 These are some of the common use components [Crossplatform](https://www.crossplatform.se/) use in our projects.
 
@@ -27,62 +27,58 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 [![GitHub watchers](https://img.shields.io/github/watchers/crossplatformsweden/react-native-core.svg?style=social&label=Watch)](https://github.com/crossplatformsweden/react-native-core)
 [![Twitter Follow](https://img.shields.io/twitter/follow/crossplatformse.svg?style=social)](https://twitter.com/crossplatformse)
 
+## Screenshots
+
+==**TODO**==
+
+## Install
+
+> npm i @crossplatform/react-native-core
+
+Or if you're hanging with the cool kids
+
+> yarn add @crossplatform/react-native-core
+
+## Usage
+
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+	      title="Log out"
+	      onPress={() => console.log('logging out'))}
+	    />
+	);
+
 ## Table of Contents
 
-- [React-Native Init Boilerplate](#react-native-core)
-  - [Table of Contents](#table-of-contents)
-  - [Can not run ShellScript](#can-not-run-shellscript)
-  - [GraphQL Apollo implementation](#graphql-apollo-implementation)
-- [Configuration file `.env`](#configuration-file-env)
-  - [Usage](#usage)
-    - [Native projects](#native-projects)
-    - [React-Native TypeScript](#react-native-typescript)
-  - [Add key](#add-key)
-    - [`.env`](#-env-)
-    - [TypeScript interface `IEnv.ts`](#typescript-interface--ienvts-)
-- [Project resources](#project-resources)
-  - [Insights Sentry](#insights-sentry)
-  - [Backlog & kanban](#backlog---kanban)
-  - [Build server and deploy: VS App Center](#build-server-and-deploy--vs-app-center)
-  - [Source Control: GitHub](#source-control--github)
+- [Crossplatform React-Native-Core](#crossplatform-react-native-core)
+  * [Install](#install)
+  * [Usage](#usage)
+  * [Table of Contents](#table-of-contents)
+  * [Can not run ShellScript](#can-not-run-shellscript)
 - [Tools](#tools)
-  - [Java](#java)
-  - [Git](#git)
-    - [Git Credential Manager](#git-credential-manager)
-  - [Node](#node)
-  - [Yarn](#yarn)
-  - [Visual Studio Code](#visual-studio-code)
-  - [Bash on Windows](#bash-on-windows)
-- [Installation](#installation)
+  * [Java](#java)
+  * [Git](#git)
+    + [Git Credential Manager](#git-credential-manager)
+  * [Node](#node)
+  * [Yarn](#yarn)
+  * [Visual Studio Code](#visual-studio-code)
 - [Scripts](#scripts)
-  - [yarn dev](#yarn-dev)
-  - [yarn lint](#yarn-lint)
-  - [yarn build](#yarn-build)
-  - [yarn build-watch](#yarn-build-watch)
-  - [yarn start](#yarn-start)
-  - [yarn test-watch](#yarn-test-watch)
-  - [yarn test](#yarn-test)
-  - [yarn ios](#yarn-ios)
-  - [yarn android](#yarn-android)
-- [Integrations](#integrations)
-  - [AppCenter](#appcenter)
-  - [Sentry](#sentry)
-    - [Organization short name](#organization-short-name)
-    - [Project short name](#project-short-name)
-    - [Project ID](#project-id)
-- [Delivery & Deployment](#delivery---deployment)
-  - [URL Scheme](#url-scheme)
-  - [Package name](#package-name)
-  - [Android Release Build](#android-release-build)
-    - [Gradle configuration used:](#gradle-configuration-used-)
-    - [Scripts](#scripts-1)
+  * [yarn dev](#yarn-dev)
+  * [yarn lint](#yarn-lint)
+  * [yarn build](#yarn-build)
+  * [yarn build-watch](#yarn-build-watch)
+  * [yarn start](#yarn-start)
+  * [yarn test-watch](#yarn-test-watch)
+  * [yarn test](#yarn-test)
 - [Debugging](#debugging)
 - [Release](#release)
 - [Environment Variables](#environment-variables)
-  - [Configuring Packager IP Address](#configuring-packager-ip-address)
+  * [Configuring Packager IP Address](#configuring-packager-ip-address)
 - [Troubleshooting](#troubleshooting)
-  - [Networking](#networking)
-  - [iOS Simulator won't open](#ios-simulator-won-t-open)
+  * [Networking](#networking)
+  * [iOS Simulator won't open](#ios-simulator-won-t-open)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -95,89 +91,6 @@ Adjust the rights on SH-files for your user (in root). Remarks: we use **[bash t
 Or manually:
 
 > sudo find . -name "\*.sh" | xargs chmod u+x
-
-## GraphQL Apollo implementation
-
-This project uses Apollo for state management as well as endpoint to the GraphQL backend.
-
-Learn more about our implementation:
-
-- **[Apollo implementation](Apollo.md)**
-
-# Configuration file `.env`
-
-The app uses **[`react-native-config`](https://github.com/luggit/react-native-config)** to store variables. Note that this isn't **[super safe](https://rammic.github.io/2015/07/28/hiding-secrets-in-android-apps/)**, so avoid putting sensitive information like keystore password there.
-
-To run the app's features like `react-native-maps`, configure the variables in the root `.env` file:
-
-    APP_NAME=RnEjectSanity
-    API_URL=https://api.github.com/graphql
-    APP_PREFIX=rninit://
-    ANDROID_VERSION_NAME=0.0.1
-    ANDROID_VERSION_CODE=1
-    IOS_VERSION=0.0.1
-    GOOGLE_MAPS_API_KEY=
-    FACEBOOK_APP_ID=
-    FACEBOOK_DISPLAY_NAME=ReactNativeInitBoilerplate
-    SENTRY_URI=https://yourID.sentry.io/token
-
-## Usage
-
-### Native projects
-
-See **[documentation](https://github.com/luggit/react-native-config)**. The above variables are used in native iOS and Android projects, like `APP_NAME`, in `AndroidManifest.xml` and `Info.plist` respectivly.
-
-### React-Native TypeScript
-
-The interface (below) and **`source//config/CrossConfigReader.ts`** allows you to use strictly typed configuration values in the RN project. For example `SentryUtility.ts`:
-
-    import CrossConfigReader from '../config/CrossConfigReader';
-    ...
-    Sentry.config(
-            CrossConfigReader.GetEnv().SENTRY_URI
-          ).install();
-
-## Add key
-
-We love typed code. That's we use TypeScript. However, to achive this every new key needs to be added in two places:
-
-### `.env`
-
-Obviously, add your key value pair below the existing keys in the root `.env` file, e.g:
-
-    MY_KEY=MyTokenOrSomething
-
-### TypeScript interface `IEnv.ts`
-
-The interface `./source/IEnv.ts` provides type mapping for your key. You can provide JS Doc comment too if you like.
-
-    export interface IEnv {
-    	...
-       /**
-       * Tells the user what year it is
-       */
-    	MY_KEY: string;
-    }
-
-# Project resources
-
-## Insights Sentry
-
-Application insights / bug reporting:
-
-- **https://github.com/getsentry/react-native-sentry**
-
-## Backlog & kanban
-
-- **[GitHub Crossplatform](https://github.com/crossplatformsweden/react-native-core/projects)**
-
-## Build server and deploy: VS App Center
-
-- **TODO**
-
-## Source Control: GitHub
-
-- **[crossplatformsweden/react-native-core](https://github.com/crossplatformsweden/react-native-core.git)**
 
 # Tools
 
@@ -227,39 +140,11 @@ We install and run our scripts with yarn, as an alternative to npm:
 
 We use Visual Studio Code with relevant plugins.
 
-- **[GraphQL for VSCode](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode)**
 - **[TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)**
 - **[TypeScript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)**
 - **[TypeScript importer](https://marketplace.visualstudio.com/items?itemName=pmneo.tsimporter)**
 - **[TypeScript toolbox](https://marketplace.visualstudio.com/items?itemName=DSKWRK.vscode-generate-getter-setter)**
 - **[Add jsdoc comments](https://marketplace.visualstudio.com/items?itemName=stevencl.addDocComments)**
-
-## Bash on Windows
-
-To avoid having to run Windows specific scripts you can use Bash termial in VS Code, after having installed Git (above).
-
-Ppen VS Code settings editor and add **"terminal.integrated.shell.windows"** to your settings.
-
-On Windows 10, with Git installed (all options), the path to Bash should be:
-
-> C:\\Program Files\\Git\\bin\\bash.exe
-
-Now we have a new setting similar to:
-
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
-New terminals in VS Code will use **Bash** instead of PowerShell and be able to execute all scripts without the **`-win`** parameter.
-
-**Source**  
-**[https://stackoverflow.com/a/42606838](https://stackoverflow.com/a/42606838)**
-
-# Installation
-
-Install using **`yarn`** or **`npm install`**. The **`postinstall`** scripts will add required global CLI:s to your computer.
-
-**Warning!** Don't use **sudo** on MacOS unless absolutely unavoidable. You might end up having to reinstall all globals.
-
-    yarn install
 
 # Scripts
 
@@ -268,7 +153,6 @@ Install using **`yarn`** or **`npm install`**. The **`postinstall`** scripts wil
 **Always run after pull / clone!**
 
 - Installs global tools (npm packages, CLI tools)
-- Runs GraphQL generation
 - Cleans code using `yarn lint`
 
 ## yarn lint
@@ -310,74 +194,6 @@ You can run CI style tests in respective folder using
 But in development you would want to test and **update Jest snapshots** (**`--u`**):
 
     yarn test-watch
-
-## yarn ios
-
-Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
-
-Runs the simulator named `iPhone 7` which we consider most stable.
-
-There's a couple of scripts that runs a specific device:
-
-- `ios-device` - runs default device which can be a physical one (see "Run on device" above)
-- `yarn ios6` - runs the device named `iPhone 6`
-- `yarn ios8` - runs the device named `iPhone 8`
-- `yarn ios8plus` - runs the device named `iPhone 8 Plus`
-- `yarn ipad` - runs the device named `iPad (5th generation)`
-
-## yarn android
-
-Like `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup).
-
-- **[Android Release Build](#android-release-build)**
-
-# Integrations
-
-## AppCenter
-
-## Sentry
-
-### Organization short name
-
-> crossplatform-sweden-ab
-
-### Project short name
-
-> TODO
-
-### Project ID
-
-> TODO
-
-# Delivery & Deployment
-
-Don't put sensitive information here. Rather user something like
-
-- **https://github.com/luggit/react-native-config**
-
-## URL Scheme
-
-> TODO
-
-## Package name
-
-> TODO
-
-## Android Release Build
-
-Assuming keystore is set up **[according to documentation](https://facebook.github.io/react-native/docs/signed-apk-android)** you can use the following commands.
-
-### Gradle configuration used:
-
-https://github.com/react-community/react-native-maps/issues/2188#issuecomment-418585832
-
-### Scripts
-
-> yarn android-build
-
-If there are errors, try the full insights:
-
-> yarn android-build-debug
 
 # Debugging
 
