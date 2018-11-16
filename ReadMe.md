@@ -35,6 +35,7 @@ These are some of the common use components [Crossplatform](https://www.crosspla
   - [Yarn](#yarn)
   - [Visual Studio Code](#visual-studio-code)
   - nstallation](#installation)
+
 - [Scr
 - [Installation](#installation)
 - - [yarn dev](#yarn-
@@ -70,8 +71,7 @@ Adjust the rights on SH-files
   - [Can not run ShellScript](#can-not-run-shellscript)
   - [Insights Sentry](#insights-sentry)
   - ools](#tools)
-  - [Git](#git)
-    -
+  - ## [Git](#git)
   - ools](#tools)
   - - [Git Cred
     - [Git Creden
@@ -86,8 +86,7 @@ Adjust the rights on SH-files
   - nstallation](#installation)
 
 - [Scr
--
-  - nstallation](#installation)
+- - nstallation](#installation)
 
 - [Scr
 - - [yarn dev](#yarn-
@@ -100,6 +99,7 @@ Adjust the rights on SH-files
   - ebugging](#debugging)
 
 - [Debuggi
+
   - ebugging](#debugging)
 
 - [Debugging](#debugging)
@@ -137,16 +137,20 @@ Application insights / bug reporting:
 
 - \*\* Backlog & kanban
 
-- **[Backlog & kanban
-  
+- **[Backlog & kanban
+
+
+
   ](**
 
 ## Backlog & kanban
 
 - \*\* Source Control: GitHub
 
-- **[Source Control: GitHub
-  
+- **[Source Control: GitHub
+
+
+
   - \*\*Tools](
 ## Git
 
@@ -229,6 +233,7 @@ On Windows 10, with Git installed (all options), the path to Bash should be:
 Now we have a new setting similar to:
 
 ```
+
 ```
 
 N
@@ -289,6 +294,7 @@ Run tests as CI, not updating any snapshots. Run this before commit to ensure te
 You can run CI style tests in respective folder using
 
 ```
+
 ```
 
 B
@@ -379,6 +385,7 @@ You can configure some of Create React Native App's behavior using environment v
 When starting your project, you'll see something like this for your project URL:
 
 ```
+
 ```
 
 T
@@ -396,10 +403,13 @@ Mac and Linux:
 ```
 
 `
+
 ```
 
 ```
+
 W
+
 ```
 
 ```
@@ -407,14 +417,17 @@ W
 Windows:
 
 ```
+
 ```
 
 T
+
 ```
 
 T
 
 ```
+
 The above example would cause the development server to listen on `exp://my-custom-ip-address-or-hostname:19000`.
 
 # Troubleshooting
@@ -439,6 +452,7 @@ T
 Try opening Safari or Chrome on your phone and loading
 
 ```
+
 ```
 
 a
@@ -452,10 +466,13 @@ and
 ```
 
 `
+
 ```
 
 ```
+
 I
+
 ```
 
 ```
