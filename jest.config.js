@@ -6,10 +6,12 @@ module.exports = {
   cacheDirectory: ".jest/cache",
   testPathIgnorePatterns: [
     "\\.snap$",
-    "<rootDir>/node_modules/"
+    "<rootDir>/node_modules/",
+    "<rootDir>/build"
   ],
   transformIgnorePatterns: [
     "\\.snap$",
+    "<rootDir>/build",
     'node_modules/(?!(react-native|react-native-vector-icons|react-native/Libraries/Image/RelativeImageStub|react-navigation|jest-resolve|expo|lodash|react|jest-expo|react-native-elements|react-native-google-places-autocomplete)/)',
   ],
   transform: {
@@ -41,6 +43,7 @@ module.exports = {
     "!**/__snapshots__/**",
     "!**/android/**",
     "!**/ios/**",
-    "!**/config/**"
+    "!**/config/**",
+    "!**/build/**"
   ]
 };

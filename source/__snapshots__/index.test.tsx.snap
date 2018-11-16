@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Index should have <CrossButton /> Component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    color="blue"
+    disabled={false}
+    icon={[Function]}
+    iconName="home"
+    mode="text"
+    onPress={[MockFunction]}
+    size={64}
+    style={
+      Object {
+        "height": 45,
+        "marginRight": 10,
+      }
+    }
+    title="home"
+  >
+    home
+  </View>
+</View>
+`;

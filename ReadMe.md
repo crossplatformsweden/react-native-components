@@ -10,13 +10,10 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 
 ---
 
-
-[![GitHub last commit](https://img.shields.io/github/last-commit/crossplatformsweden/react-native-core.svg)](https://github.com/crossplatformsweden/react-native-core/commits/master)
-[![GitHub Release Date](https://img.shields.io/github/release-date/crossplatformsweden/react-native-core.svg)](https://github.com/crossplatformsweden/react-native-core/releases)
 [![React Native](https://img.shields.io/badge/React%20Native-v0.57-blue.svg)](https://facebook.github.io/react-native/)
 [![React Navigation V2](https://img.shields.io/badge/React%20Navigation-v2.18.2-blue.svg)](https://reactnavigation.org/)
+![GitHub](https://img.shields.io/github/license/crossplatformsweden/react-native-core.svg)
 
-TODO:
 [![Build status](https://crossplatformsweden.visualstudio.com/ParkeraApp/_apis/build/status/GitHubInitBoilerplate-CI)](https://crossplatformsweden.visualstudio.com/ParkeraApp/_build/latest?definitionId=-1)
 [![codecov](https://codecov.io/gh/crossplatformsweden/react-native-core/branch/master/graph/badge.svg)](https://codecov.io/gh/crossplatformsweden/react-native-core)
 [![dependencies Status](https://img.shields.io/david/crossplatformsweden/react-native-init-core/status.svg)](https://david-dm.org/crossplatformsweden/react-native-core)

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossButton /> \`ICrossButtonProps\` interface Should match snapshot 1`] = `Object {}`;
+
+exports[`components <CrossButton /> With \`iconName\` but without \`title\` property provided Component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    color="blue"
+    iconName="map"
+    name="map"
+    onPress={[Function]}
+    size={64}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`components <CrossButton /> With \`title\` and \`iconName\` properties provided Component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    color="blue"
+    disabled={false}
+    icon={[Function]}
+    iconName="home"
+    mode="text"
+    onPress={[MockFunction]}
+    size={64}
+    style={
+      Object {
+        "height": 45,
+        "marginRight": 10,
+      }
+    }
+    title="home"
+  >
+    home
+  </View>
+</View>
+`;

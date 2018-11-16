@@ -9,10 +9,15 @@
     "build-watch": "tsc -p ./tsconfig.json --watch",
     "publish": "npm publish --access=public",
     "lint": "./scripts/lint.sh",
-    "sh-fix": "sudo find . -name \"*.sh\" | xargs chmod u+x",
+    "read-sh": "sudo find . -name \"*.sh\" | xargs chmod u+x",
     "test": "node node_modules/jest/bin/jest.js --ci",
     "test-watch": "node node_modules/jest/bin/jest.js --watchAll -u",
-    "test-watch-fast": "node node_modules/jest/bin/jest.js --watchAll -u --collectCoverage=false"
+    "test-watch-fast": "node node_modules/jest/bin/jest.js --watchAll -u --collectCoverage=false",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion" : "yarn test",
+    "version": "yarn lint && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "repository": {
     "type": "git",
