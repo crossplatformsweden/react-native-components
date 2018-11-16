@@ -1,6 +1,6 @@
 {
   "name": "@crossplatform/react-native-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Beautiful React-Native components using RN Paper by Callstack",
   "main": "lib/index.js",
   "scripts": {
@@ -13,12 +13,10 @@
     "lint": "./scripts/lint.sh",
     "git-add": "git add -A",
     "read-sh": "sudo find . -name \"*.sh\" | xargs chmod u+x",
-
     "test": "node node_modules/jest/bin/jest.js --ci",
     "test-watch": "node node_modules/jest/bin/jest.js --watchAll -u",
     "test-watch-fast": "node node_modules/jest/bin/jest.js --watchAll -u --collectCoverage=false",
     "test-lint-build": "yarn test && yarn lint && yarn build",
-
     "prepublishOnly": "yarn test-lint-build",
     "preversion": "yarn test-lint-build",
     "postversion": "git push && git push --tags"
