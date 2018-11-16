@@ -20,7 +20,7 @@
     "test-lint-build": "yarn test && yarn lint && yarn build",
 
     "prepublishOnly": "yarn test-lint-build",
-    "preversion": "yarn yarn test-lint-build",
+    "preversion": "yarn test-lint-build",
     "postversion": "git push && git push --tags"
   },
   "repository": {
