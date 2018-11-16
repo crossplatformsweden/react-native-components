@@ -14,33 +14,47 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 ## Table of Contents
 
 - [Crossplatform React-Native-Core](#crossplatform-react-native-core)
+
   - [Table of Contents](#table-of-contents)
-  - [Can not run ShellScript](#can-not-run-shellscript)
+  - [Can not run ShellScript](#can-not-run-shellscript)
+
     [Insights Sentry](#insights-sentry)
+
   - [Backlog & kanban](#backlog---kanban)
-  - [Source Control: GitHub](#source-control--github)
-- [Tools](#tools)
+  - ools](#tools)
   - [Git] #git)
-    - [Git Credential Manager](#git-credential-manager)
+    - [Git Creden
+
+- - [Git] #git)
+
+  - [ [G] #git)
+    - ode](#node)
+  - [Yarn](#yarn)
+  - [Visual Studi
   - [Node](#node)
   - [Yarn](#yarn)
   - [Visual Studio Code](#visual-studio-code)
-  - [B sh on Windows](#bash-on-windows)
+  - nstallation](#installation)
+- [Scr
 - [Installation](#installation)
-- [Scripts](#scripts)
+- - [yarn dev](#yarn-
   - [yarn dev](#yarn-de)
   - [yarn lint](#yarn-lint)
   - [yarn build](#yarn-build)
   - [yarn build-watch](#yarn-build-watch)
   - [yarn test-watch](#yarn-test-watch)
-  - [yarn test](#yarn-test)
+  - bugging](#debugging)
+-
 - Debugging](#debugging)
 - [Release](#release)
-- [Environment Variables](#environment-variables)
-  - [Configuring Packager IP Address](#configuring-packager-ip-address)
-- [Trou leshooting](#troubleshooting)
+- - [Configuring Packager IP Address](#configurin
+  - rou leshooting](#troubleshooting)
   - [Networking](#networking)
-  - [iOS Simulator won't open](#ios-simulator-won-t-open)
+
+- - [Networking](#networking)
+  - [i
+  - [Networking](#networking)
+  - mall><i><a href='http://ecotrust-canada.github.io/mar
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-t c/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -55,11 +69,13 @@ Adjust the rights on SH-files
   - [Table of Contents](#table-of-contents)
   - [Can not run ShellScript](#can-not-run-shellscript)
   - [Insights Sentry](#insights-sentry)
-  - [Backlog & kanban](#backlog---kanban)
   - ools](#tools)
   - [Git](#git)
+    -
+  - ools](#tools)
+  - - [Git Cred
     - [Git Creden
-- - [Git](#git)
+- - - - [Git Cr
 
   - - [Git Cred
     - ode](#node)
@@ -67,28 +83,34 @@ Adjust the rights on SH-files
   - [Visual Studi
   - [Node](#node)
   - [Yarn](#yarn)
-  - [Visual Studio Code](#visual-studio-code)
   - nstallation](#installation)
 
 - [Scr
-- [Installation](#installation)
+-
+  - nstallation](#installation)
+
+- [Scr
+- - [yarn dev](#yarn-
+  - [yar
 - - [yarn dev](#yarn-
   - [yarn dev](#yarn-dev)
   - [yarn lint](#yarn-lint)
   - [yarn build](#yarn-build)
   - [yarn build-watch](#yarn-build-watch)
-  - [yarn test-watch](#yarn-test-watch)
+  - ebugging](#debugging)
+
+- [Debuggi
   - ebugging](#debugging)
 
 - [Debugging](#debugging)
-- [Release](#release)
-- - [Configuring Packager IP Address](#configurin
+- - [Configuring Pack
+- - [oubleshooting](#troubleshooting](#configurin
   - roubleshooting](#troubleshooting)
-  - [Networking](#networking)
+  - - [Networking](#networkin
 
 - - [Networking](#networking)
   - [i
-  - [Networking](#networking)
+  - mall><i><a href='http://e
   - mall><i><a href='http://ecotrust-canada.github.io/mar
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -100,7 +122,8 @@ Adjust the rights on SH-files for your user (in root). Remarks: we use \*\* chmo
 ## Insights\*\*
 
 ```
-Or manually:
+
+```
 
 ```
 
@@ -114,13 +137,20 @@ Application insights / bug reporting:
 
 - \*\* Backlog & kanban
 
-- **[GitHub Crossplatform](**
+- **[Backlog & kanban
+  
+  ](**
 
 ## Backlog & kanban
 
 - \*\* Source Control: GitHub
 
-- **[crossplatformsweden/react-native-core](https://github.c**
+- **[Source Control: GitHub
+  
+  - \*\*Tools](
+## Git
+
+We'r**
 
 ## Source Control: GitHub
 
@@ -130,7 +160,9 @@ Application insights / bug reporting:
 
 We're using latest stable. Install the version for your OS from:
 
-**[https://git**
+**[ Tools
+
+#**
 
 # Tools
 
@@ -175,7 +207,11 @@ We use Visual Studio Code with relevant plugins.
 - **[TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)**
 - **[TypeScript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)**
 - **[TypeScript importer](https://marketplace.visualstudio.com/items?itemName=pmneo.tsimporter)**
-- **[TypeScript toolbox](https://marketplace.visualstudio.com/items?itemName=DSKWRK.vscode-generate-getter-setter)**
+- **\* Bash on Windows
+
+To avoid having to run Windows specific scripts you can use Bash termial in V\*\*
+
+## **
 - \*\* Bash on Windows
 
 To avoid having to run Windows specific scripts you can use Bash termial in V\*\*
@@ -193,7 +229,9 @@ On Windows 10, with Git installed (all options), the path to Bash should be:
 Now we have a new setting similar to:
 
 ```
+```
 
+N
 ```
 
 New terminals in VS Code will use **Bash** instead of PowerShell and be able to execute all scripts without the **`-win`** parameter.
@@ -210,7 +248,8 @@ Install using **`yarn`** or **`npm install`**. The **`postinstall`** scripts wil
 **Warning!** Don't use **sudo** on MacOS unless absolutely unavoidable. You might end up having to reinstall all globals.
 
 ```
-# Scripts
+
+```
 
 ```
 
@@ -250,15 +289,18 @@ Run tests as CI, not updating any snapshots. Run this before commit to ensure te
 You can run CI style tests in respective folder using
 
 ```
+```
 
+B
 ```
 
 But in development you would want to test and **update Jest snapshots** (**`--u`**):
 
 ```
-# Debugging
 
 Us
+```
+
 ```
 
 # Debugging
@@ -337,13 +379,14 @@ You can configure some of Create React Native App's behavior using environment v
 When starting your project, you'll see something like this for your project URL:
 
 ```
+```
 
+T
 ```
 
 T
 
 ```
-
 The "manifest" at that URL tells the Expo app how to retrieve and load your app's JavaScript bundle, so even if you load it in the app via a URL like `exp://localhost:19000`, the Expo client app will still try to retrieve your app at the IP address that the start script provides.
 
 In some cases, this is less than ideal. This might be the case if you need to run your project inside of a virtual machine and you have to access the packager via a different IP address than the one which prints by default. In order to override the IP address or hostname that is detected by Create React Native App, you can specify your own hostname via the `REACT_NATIVE_PACKAGER_HOSTNAME` environment variable:
@@ -352,21 +395,26 @@ Mac and Linux:
 
 ```
 
+`
 ```
 
+```
 W
+```
+
 ```
 
 Windows:
 
 ```
-npm start
+```
+
+T
 ```
 
 T
 
 ```
-
 The above example would cause the development server to listen on `exp://my-custom-ip-address-or-hostname:19000`.
 
 # Troubleshooting
@@ -379,28 +427,37 @@ Try opening a web browser on your phone and opening the URL that the packager sc
 
 ```
 
+`
 ```
 
+```
 T
+```
+
 ```
 
 Try opening Safari or Chrome on your phone and loading
 
 ```
+```
 
+a
 ```
 
 a
 
 ```
-
 and
 
 ```
 
+`
 ```
 
+```
 I
+```
+
 ```
 
 If this works, but you're still unable to load your app by scanning the QR code, please open an issue on the ot feature on your phone (beware of data usage, though), connecting your computer to that WiFi n with details about these steps and any other error messages you may have received.
