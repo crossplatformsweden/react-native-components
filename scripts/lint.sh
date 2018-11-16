@@ -7,8 +7,8 @@ prettier **/*.json --write
 # enable if there's yml 
 #echo "****** Prettier - YML ******"
 #prettier **/*.yml --write
-echo "****** Prettier - MarkDown ******"
-prettier **/*.md --write
+#echo "****** Prettier - MarkDown ******"
+#prettier **/*.md --write
 # enable if there's graphql 
 #echo "****** Prettier - GraphQL ******"
 #prettier **/*.graphql --write
