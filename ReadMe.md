@@ -14,7 +14,7 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 [![React Navigation V2](https://img.shields.io/badge/React%20Navigation-v2.18.2-blue.svg)](https://reactnavigation.org/)
 ![GitHub](https://img.shields.io/github/license/crossplatformsweden/react-native-core.svg)
 
-[![Build status](https://crossplatformsweden.visualstudio.com/ParkeraApp/_apis/build/status/GitHubInitBoilerplate-CI)](https://crossplatformsweden.visualstudio.com/ParkeraApp/_build/latest?definitionId=-1)
+[![Build status](https://crossplatformsweden.visualstudio.com/ParkeraApp/_apis/build/status/react-native-core-CI)](https://crossplatformsweden.visualstudio.com/ParkeraApp/_build/latest?definitionId=15)
 [![codecov](https://codecov.io/gh/crossplatformsweden/react-native-core/branch/master/graph/badge.svg)](https://codecov.io/gh/crossplatformsweden/react-native-core)
 [![dependencies Status](https://img.shields.io/david/crossplatformsweden/react-native-init-core/status.svg)](https://david-dm.org/crossplatformsweden/react-native-core)
 [![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
