@@ -19,8 +19,9 @@
     "prepublishOnly": "yarn test-lint-build",
     "preversion": "yarn test-lint-build",
     "postversion": "git push && git push --tags",
-    "docs": "typedoc --out docs source",
-    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs"
+    "docs": "yarn generate-docs && yarn gh-pages",
+    "generate-docs": "typedoc --out docs source",
+    "gh-pages": "gh-pages -d docs"
   },
   "repository": {
     "type": "git",

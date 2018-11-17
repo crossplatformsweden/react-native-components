@@ -7,3 +7,5 @@ install:
   - yarn
 script:
   - yarn test
+before_deploy:
+  - touch .nojekyll
