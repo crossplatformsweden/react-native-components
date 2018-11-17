@@ -7,11 +7,13 @@ module.exports = {
   testPathIgnorePatterns: [
     "\\.snap$",
     "<rootDir>/node_modules/",
-    "<rootDir>/build"
+    "<rootDir>/build",
+    "<rootDir>/lib",
   ],
   transformIgnorePatterns: [
     "\\.snap$",
     "<rootDir>/build",
+    "<rootDir>/lib",
     'node_modules/(?!(react-native|react-native-vector-icons|react-native/Libraries/Image/RelativeImageStub|react-navigation|jest-resolve|expo|lodash|react|jest-expo|react-native-elements|react-native-google-places-autocomplete)/)',
   ],
   transform: {
@@ -44,6 +46,7 @@ module.exports = {
     "!**/android/**",
     "!**/ios/**",
     "!**/config/**",
-    "!**/build/**"
+    "!**/build/**",
+    "!**/lib/**",
   ]
 };
