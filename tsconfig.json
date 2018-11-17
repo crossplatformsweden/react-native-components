@@ -69,6 +69,6 @@
     "build",
     "lib",
     "**/node_modules/*",
-    "*.test.*"
+    "source/**/*.test.*"
   ]
 }
