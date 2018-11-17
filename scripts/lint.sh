@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "******** mobile/scripts/lint.sh START ********"
+echo "******** scripts/lint.sh START ********"
 
 echo "**** Formating Code *******"
 echo "****** Prettier - JSON ******"
@@ -16,4 +16,4 @@ prettier **/*.json --write
 echo "****** TSLINT ******"
 tslint -p ./tsconfig.json --fix
 
-echo "******** mobile/scripts/lint.sh DONE ********"
+echo "******** scripts/lint.sh DONE ********"

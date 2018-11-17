@@ -47,15 +47,20 @@ The components currently use **FontAwesome v4 icons**. Ability to customize this
   * [Visual Studio Code](#visual-studio-code)
 - [Scripts](#scripts)
   * [yarn dev](#yarn-dev)
+  * [yarn read-sh](#yarn-read-sh)
+  * [yarn install-globals](#yarn-install-globals)
   * [yarn lint](#yarn-lint)
   * [yarn build](#yarn-build)
   * [yarn build-watch](#yarn-build-watch)
   * [yarn start](#yarn-start)
   * [yarn test-watch](#yarn-test-watch)
   * [yarn test](#yarn-test)
+  * [yarn docs](#yarn-docs)
+  * [npm-version](#npm-version)
 - [Debugging](#debugging)
 - [Release](#release)
   * [Publish new version](#publish-new-version)
+    + [Publish GitHub documentation](#publish-github-documentation)
 - [Environment Variables](#environment-variables)
   * [Configuring Packager IP Address](#configuring-packager-ip-address)
 - [Troubleshooting](#troubleshooting)
@@ -76,7 +81,7 @@ Or if you're hanging with the cool kids
 ```
 
 ## Documentation
-See our GitHub Pages generated from code comments
+See our GitHub Pages generated from code comments. This documentation is also available as intellisense / auto complete.
 
 * **[API Documnentation](https://crossplatformsweden.github.io/react-native-core/)**
 
@@ -85,6 +90,8 @@ See our GitHub Pages generated from code comments
 ![](https://media.giphy.com/media/MohS56wPG7AgPGteu1/giphy.gif)
 
 Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component)** if only `iconName` is supplied, else an **[Paper Button](https://callstack.github.io/react-native-paper/button.html)**.
+
+For properties and documentation, see **[API reference - Class CrossButton](https://crossplatformsweden.github.io/react-native-core/classes/_components_buttons_crossbutton_.crossbutton.html)**. 
 
 Button with **title**, but no icon:
 
@@ -208,6 +215,12 @@ We use Visual Studio Code with relevant plugins.
 - Installs global tools (npm packages, CLI tools)
 - Cleans code using `yarn lint`
 
+## yarn read-sh
+See [Can not run ShellScript](#can-not-run-shellscript)
+
+## yarn install-globals
+Install global CLI tools required by the project
+
 ## yarn lint
 
 Executes `./lint.sh` from root that runs **prettier** and **tslint** code formatting, fixing inconsistencies.
@@ -247,6 +260,12 @@ You can run CI style tests in respective folder using
 But in development you would want to test and **update Jest snapshots** (**`--u`**):
 
     yarn test-watch
+
+## yarn docs
+Generate documentation. [Read more](#publish-github-documentation)
+
+## npm-version
+Up the NPM package version before running `npm publish`. Automatically run as `prepublishOnly` command.
 
 # Debugging
 
@@ -329,6 +348,18 @@ The source code is available on the **[Crossplatform GitHub](https://github.com/
 2. Publish the new version on NPM (if not logged in run `npm adduser` first)
 
 	npm publish
+
+### Publish GitHub documentation
+Generate documentation using the `docs`command
+
+```bash
+	yarn docs
+```
+
+This will
+
+A) Generate docs using the `typedoc` library (`yarn generate-docs`)
+B) Publish to GitHub pages using the `gh-pages` library (`yarn gh-pages`)
 
 # Environment Variables
 
