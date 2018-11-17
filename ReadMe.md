@@ -8,6 +8,8 @@ Beautiful React-Native components using [RN Paper by Callstack](https://github.c
 
 These are some of the common use components [Crossplatform](https://www.crossplatform.se/) use in our projects.
 
+The components currently use **FontAwesome v4 icons**. Ability to customize this might be added.
+
 ---
 
 [![npm](https://img.shields.io/npm/v/@crossplatform/react-native-core.svg)](https://www.npmjs.com/package/@crossplatform/react-native-core) 
@@ -27,29 +29,59 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 [![GitHub watchers](https://img.shields.io/github/watchers/crossplatformsweden/react-native-core.svg?style=social&label=Watch)](https://github.com/crossplatformsweden/react-native-core)
 [![Twitter Follow](https://img.shields.io/twitter/follow/crossplatformse.svg?style=social)](https://twitter.com/crossplatformse)
 
-## Screenshots
-
-==**TODO**==
-
 ## Install
 
-> npm i @crossplatform/react-native-core
+	npm i @crossplatform/react-native-core
 
 Or if you're hanging with the cool kids
 
-> yarn add @crossplatform/react-native-core
+	yarn add @crossplatform/react-native-core
 
-## Usage
+## Documentation
+See our GitHub Pages generated from code comments
+
+* **[API Documnentation](https://crossplatformsweden.github.io/react-native-core/)**
+
+## Components
+### CrossButton
+Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component)** if only `iconName` is supplied, else an **[Paper Button](https://callstack.github.io/react-native-paper/button.html)**.
+
+Button with **title**, but no icon:
 
 	import { CrossButton } from '@crossplatform/react-native-core';
 	
 	export const ButtonComp => () => (
 		<CrossButton
 	      title="Log out"
-	      onPress={() => console.log('logging out'))}
+	      onPress={() => console.log('logging out')}
 	    />
 	);
+	
+Button with **title** and **icon**:
 
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+			onPress={() => console.log('logging in')}
+			mode='contained'
+			title='Log in'
+			iconName='sign-in'
+		/>
+	);
+
+	
+Clickable icon:
+
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+		  onPress={() => console.log('navigating')}
+		  iconName='map'
+		/>
+	);
+	
 ## Table of Contents
 
 - [Crossplatform React-Native-Core](#crossplatform-react-native-core)

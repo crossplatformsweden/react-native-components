@@ -139,3 +139,6 @@ ios/Podfile.lock
 
 # Environment
 .env.local
+
+# Docs
+docs

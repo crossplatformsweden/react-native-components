@@ -8,8 +8,9 @@ import _ from 'lodash';
 import styles, { Colors } from '../../styles';
 
 /**
- * Cross button options
+ * Properties for the {@link CrossButton} component
  * @typedef ICrossButtonProps
+ * @type ICrossButtonProps
  */
 export interface ICrossButtonProps {
   /**
@@ -48,10 +49,13 @@ export interface ICrossButtonProps {
 }
 
 /**
- * A custom button that displays as an icon if {@param title} is not supplied
+ * A custom button that displays as an Paper Button with icon or just an icon if {@link ICrossButtonProps.title} is not supplied.
+ * 
+ * Remarks: all icons are {@link https://fontawesome.com/v4.7.0/ FontAwesome v4}.
+ * 
+ * Remark: default appearence is "text", see {@link ICrossButtonProps.mode}
  *
- * Remarks: use custom {@param onPressButton} event
- * @param param0 {@link ICrossButtonProps}
+ * Properties are {@link ICrossButtonProps}
  */
 export class CrossButton extends React.Component<ICrossButtonProps> {
   render() {

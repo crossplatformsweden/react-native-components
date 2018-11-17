@@ -6,20 +6,22 @@
   "scripts": {
     "dev": "yarn install-globals && yarn lint",
     "install-globals": "yarn global add typescript tslint prettier codecov",
-    "build": "tsc -p ./tsconfig.json",
-    "build-watch": "tsc -p ./tsconfig.json --watch",
-    "npm-publish": "./scripts/npm-publish.sh",
-    "npm-version": "./scripts/npm-version.sh",
     "lint": "./scripts/lint.sh",
     "git-add": "git add -A",
     "read-sh": "sudo find . -name \"*.sh\" | xargs chmod u+x",
+    "build": "tsc -p ./tsconfig.json",
+    "build-watch": "tsc -p ./tsconfig.json --watch",
     "test": "node node_modules/jest/bin/jest.js --ci",
     "test-watch": "node node_modules/jest/bin/jest.js --watchAll -u",
     "test-watch-fast": "node node_modules/jest/bin/jest.js --watchAll -u --collectCoverage=false",
-    "test-lint-build": "yarn test && yarn lint && yarn build",
+    "test-lint-build": "yarn test && yarn lint && yarn build && yarn docs",
+    "npm-publish": "./scripts/npm-publish.sh",
+    "npm-version": "./scripts/npm-version.sh",
     "prepublishOnly": "yarn test-lint-build",
     "preversion": "yarn test-lint-build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "docs": "typedoc --out docs source",
+    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs"
   },
   "repository": {
     "type": "git",
@@ -56,8 +58,10 @@
     "@types/react-navigation": "^2.0.21",
     "@types/react-navigation-material-bottom-tabs": "^0.3.0",
     "@types/react-test-renderer": "^16.0.2",
+    "@babel/runtime": "^7.1.5",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
+    "gh-pages": "^2.0.1",
     "husky": "1.0.0-rc.13",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "^0.49.2",
@@ -71,10 +75,8 @@
     "tslint-eslint-rules": "^5.4.0",
     "tslint-plugin-prettier": "^2.0.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.6"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.1.5",
+    "typedoc": "https://github.com/TypeStrong/typedoc",
+    "typescript": "^3.1.6",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "react": "^16.6.3",
@@ -82,6 +84,9 @@
     "react-native-paper": "^2.2.4",
     "react-navigation": "^2.18.2",
     "react-navigation-material-bottom-tabs": "^0.4.0"
+  },
+  "peerDependencies": {
+    "react-native-paper": "^2.2.4"
   },
   "husky": {
     "hooks": {
