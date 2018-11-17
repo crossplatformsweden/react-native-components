@@ -50,9 +50,9 @@ export interface ICrossButtonProps {
 
 /**
  * A custom button that displays as an Paper Button with icon or just an icon if {@link ICrossButtonProps.title} is not supplied.
- * 
+ *
  * Remarks: all icons are {@link https://fontawesome.com/v4.7.0/ FontAwesome v4}.
- * 
+ *
  * Remark: default appearence is "text", see {@link ICrossButtonProps.mode}
  *
  * Properties are {@link ICrossButtonProps}

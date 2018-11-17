@@ -29,65 +29,14 @@ The components currently use **FontAwesome v4 icons**. Ability to customize this
 [![GitHub watchers](https://img.shields.io/github/watchers/crossplatformsweden/react-native-core.svg?style=social&label=Watch)](https://github.com/crossplatformsweden/react-native-core)
 [![Twitter Follow](https://img.shields.io/twitter/follow/crossplatformse.svg?style=social)](https://twitter.com/crossplatformse)
 
-## Install
-
-	npm i @crossplatform/react-native-core
-
-Or if you're hanging with the cool kids
-
-	yarn add @crossplatform/react-native-core
-
-## Documentation
-See our GitHub Pages generated from code comments
-
-* **[API Documnentation](https://crossplatformsweden.github.io/react-native-core/)**
-
-## Components
-### CrossButton
-Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component)** if only `iconName` is supplied, else an **[Paper Button](https://callstack.github.io/react-native-paper/button.html)**.
-
-Button with **title**, but no icon:
-
-	import { CrossButton } from '@crossplatform/react-native-core';
-	
-	export const ButtonComp => () => (
-		<CrossButton
-	      title="Log out"
-	      onPress={() => console.log('logging out')}
-	    />
-	);
-	
-Button with **title** and **icon**:
-
-	import { CrossButton } from '@crossplatform/react-native-core';
-	
-	export const ButtonComp => () => (
-		<CrossButton
-			onPress={() => console.log('logging in')}
-			mode='contained'
-			title='Log in'
-			iconName='sign-in'
-		/>
-	);
-
-	
-Clickable icon:
-
-	import { CrossButton } from '@crossplatform/react-native-core';
-	
-	export const ButtonComp => () => (
-		<CrossButton
-		  onPress={() => console.log('navigating')}
-		  iconName='map'
-		/>
-	);
-	
 ## Table of Contents
 
 - [Crossplatform React-Native-Core](#crossplatform-react-native-core)
-  * [Install](#install)
-  * [Usage](#usage)
   * [Table of Contents](#table-of-contents)
+  * [Install](#install)
+  * [Documentation](#documentation)
+  * [Components](#components)
+    + [CrossButton](#crossbutton)
   * [Can not run ShellScript](#can-not-run-shellscript)
 - [Tools](#tools)
   * [Java](#java)
@@ -106,6 +55,7 @@ Clickable icon:
   * [yarn test](#yarn-test)
 - [Debugging](#debugging)
 - [Release](#release)
+  * [Publish new version](#publish-new-version)
 - [Environment Variables](#environment-variables)
   * [Configuring Packager IP Address](#configuring-packager-ip-address)
 - [Troubleshooting](#troubleshooting)
@@ -114,15 +64,82 @@ Clickable icon:
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+## Install
+```bash
+	npm i @crossplatform/react-native-core
+```
+
+Or if you're hanging with the cool kids
+
+```bash
+	yarn add @crossplatform/react-native-core
+```
+
+## Documentation
+See our GitHub Pages generated from code comments
+
+* **[API Documnentation](https://crossplatformsweden.github.io/react-native-core/)**
+
+## Components
+### CrossButton
+![](https://media.giphy.com/media/MohS56wPG7AgPGteu1/giphy.gif)
+
+Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component)** if only `iconName` is supplied, else an **[Paper Button](https://callstack.github.io/react-native-paper/button.html)**.
+
+Button with **title**, but no icon:
+
+```typescript
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+	      title="Log out"
+	      onPress={() => console.log('logging out')}
+	    />
+	);
+```
+
+Button with **title** and **icon**:
+
+```typescript
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+			onPress={() => console.log('logging in')}
+			mode='contained'
+			title='Log in'
+			iconName='sign-in'
+		/>
+	);
+```
+	
+Clickable icon:
+
+```typescript
+	import { CrossButton } from '@crossplatform/react-native-core';
+	
+	export const ButtonComp => () => (
+		<CrossButton
+		  onPress={() => console.log('navigating')}
+		  iconName='map'
+		/>
+	);
+```
+
 ## Can not run ShellScript
 
 Adjust the rights on SH-files for your user (in root). Remarks: we use **[bash terminal in VS Code](#bash-on-windows)**
 
+```bash
     yarn read-sh
+```
 
 Or manually:
 
-> sudo find . -name "\*.sh" | xargs chmod u+x
+```bash
+	sudo find . -name "\*.sh" | xargs chmod u+x
+```
 
 # Tools
 
@@ -132,11 +149,13 @@ We use **version 8** of the Java JDK. On OSX, remove any older versions accordin
 
 https://stackoverflow.com/questions/46770453/java-error-when-using-git-credential-manager-in-mac-on-osx
 
+```bash
     brew cask remove java
     sudo rm -rf "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin"
     sudo rm -rf "/Library/PreferencePanes/JavaControlPanel.prefPane"
     sudo rm -rf "~/Library/Application Support/Oracle"
     sudo rm -rf "~/Library/Java"
+```
 
 **[http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**
 
@@ -151,7 +170,9 @@ We're using latest stable. Install the version for your OS from:
 You need the manager to log in to Microsoft from MacOS using Git.  
 If you've updated Java, re-install GCM after.
 
-> git-credential-manager install
+```bash
+	git-credential-manager install
+```
 
 ## Node
 
@@ -203,10 +224,10 @@ Start **TypeScript** compiler and watch for changes.
 
 Start the React-Native packager. You can also start it with options:
 
-```
-npm start -- --reset-cache
-# or
-yarn start -- --reset-cache
+```bash
+	npm start -- --reset-cache
+	# or
+	yarn start -- --reset-cache
 ```
 
 ## yarn test-watch
@@ -233,15 +254,18 @@ Use VS Code's debugging capabilities to maintain a effective development cycle.
 
 **`Launch.json`** configuration is not checked in, but here is the debug `launch.json` for generation:
 
+```json
         {
             "type": "node",
             "request": "launch",
             "name": "Generate Files",
             "program": "${workspaceRoot}/generation/lib/generateFiles.js"
         }
+```
 
 For **mobile** you can use tasks like these:
 
+```json
         {
             "name": "Debug Android",
             "program": "${workspaceRoot}/.vscode/launchReactNative.js",
@@ -260,9 +284,11 @@ For **mobile** you can use tasks like these:
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/.vscode/.react"
         },
+```
 
 And finally Jest Test debugging:
 
+```json
     	{
             "type": "node",
             "request": "launch",
@@ -285,12 +311,24 @@ And finally Jest Test debugging:
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },
+```
 
 # Release
 
-The project is released through CD in VSTS. Update **release notes** if relevant:
+The project is released through NPM
 
-- **[Mobile Project Release Notes](ReleaseNotes.md)**
+[![npm](https://img.shields.io/npm/v/@crossplatform/react-native-core.svg)](https://www.npmjs.com/package/@crossplatform/react-native-core) 
+
+The source code is available on the **[Crossplatform GitHub](https://github.com/crossplatformsweden/react-native-core)**.
+
+## Publish new version
+1. Update the version. This will also run build and linting.
+
+	yarn npm-version
+
+2. Publish the new version on NPM (if not logged in run `npm adduser` first)
+
+	npm publish
 
 # Environment Variables
 

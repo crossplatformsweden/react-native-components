@@ -8,7 +8,7 @@ function setup(iconName: string, title?: any, size?: number, onPress?: () => voi
     <CrossButton
       iconName={iconName}
       title={title}
-      color="blue"
+      color='blue'
       onPress={onPress || jest.fn()}
       size={size || 64}
     />
@@ -36,7 +36,7 @@ describe('components', () => {
       it('Should have `color` property that is undefined', () => {
         expect(propsMock.color).toBeUndefined();
       });
-    })
+    });
 
     describe('With `title` and `iconName` properties provided', () => {
       it('Component should render', () => {
