@@ -3,13 +3,18 @@ import CrossButton, { ICrossButtonProps } from './CrossButton';
 import TestRenderer from 'react-test-renderer';
 import { styles } from '../../styles';
 
-function setup(iconName: string, title?: any, size?: number, onPress?: () => void) {
+function setup(
+  iconName: string,
+  title?: any,
+  size?: number,
+  onPress?: () => void
+) {
   return TestRenderer.create(
     <CrossButton
       iconName={iconName}
       title={title}
-      color='blue'
-      onPress={onPress || jest.fn()}
+      color="blue"
+      onPress={onPress || jest.fn()}
       size={size || 64}
     />
   );
@@ -27,7 +32,7 @@ jest.unmock('./CrossButton');
    */
 describe('components', () => {
   describe('<CrossButton />', () => {
-    describe('`ICrossButtonProps` interface', () =>  {
+    describe('`ICrossButtonProps` interface', () => {
       const propsMock: ICrossButtonProps = {};
       it('Should match snapshot', () => {
         expect(propsMock).toMatchSnapshot();
@@ -89,7 +94,7 @@ describe('components', () => {
 
       it('<FontAwesomeButton /> onPress should be called', () => {
         let called = false;
-        const onCalled = () => called = !called;
+        const onCalled = () => (called = !called);
 
         const wrapper = setup('map', undefined, undefined, onCalled);
         const child = wrapper.root.findByProps({ name: 'map' });

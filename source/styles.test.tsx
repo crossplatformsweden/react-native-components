@@ -29,7 +29,7 @@ describe('styles', () => {
 
   describe('Theme const', () => {
     it('should have `roundness` property with value `4`', () => {
-        expect(Theme.roundness).toEqual(4);
-      });
+      expect(Theme.roundness).toEqual(4);
+    });
   });
 });

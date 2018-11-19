@@ -72,8 +72,7 @@ export class CrossButton extends React.Component<ICrossButtonProps> {
               }
             }}
             color={this.props.color || Colors.CrossBlack}
-            name={this.props.iconName.toString()
-            }
+            name={this.props.iconName.toString()}
           />
         ) : (
           <Button

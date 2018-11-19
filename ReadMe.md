@@ -106,7 +106,7 @@ See our GitHub Pages generated from code comments. This documentation is also av
 ### CrossButton
 ![](https://media.giphy.com/media/MohS56wPG7AgPGteu1/giphy.gif)
 
-Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component)** if only `iconName` is supplied, else an **[Paper Button](https://callstack.github.io/react-native-paper/button.html)**.
+Renders an [FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component) if only `iconName` is supplied, else an [Paper Button](https://callstack.github.io/react-native-paper/button.html).
 
 For properties and documentation, see **[API reference - Class CrossButton](https://crossplatformsweden.github.io/react-native-core/classes/_components_buttons_crossbutton_.crossbutton.html)**. 
 
@@ -150,6 +150,54 @@ Clickable icon:
             backgroundColor="transparent"
           />
 	);
+```
+
+### CrossBusyIndicator
+![](https://media.giphy.com/media/1jYwyqHG3zWRcKucSg/giphy.gif)
+
+Renders a [react-native-modal](https://github.com/react-native-community/react-native-modal) containing cool animations from [react-native-indicators](https://github.com/n4kz/react-native-indicators).
+
+For properties and documentation, see **[API reference - Class CrossBusyIndicator](https://crossplatformsweden.github.io/react-native-core/classes/_components_modals_crossbusyindicator_.crossbusyindicator.html)**. 
+
+Feedback `message` and *PacmanIndicator* `type` (because, why not).
+
+```typescript
+	<CrossBusyIndicator
+		  isBusy={this.state.isBusy}
+		  type={CrossSpinnerType.PacmanIndicator}
+		  isCancelButtonVisible={true}
+		  message="Loading.."
+		  onCancel={() => this.setState({ isBusy: false })}
+	/>
+```
+
+Non-cancellable and custon styles for `spinnerProps` and `messageStyle`:
+
+```typescript
+	<CrossBusyIndicator
+		  key="busy2"
+		  testID="busy2"
+		  spinnerProps={{ color: 'red', type: CrossSpinnerType.WaveIndicator }}
+		  messageStyle={{ color: 'red' }}
+		  isBusy={this.state.isBusy2}
+		  isCancelButtonVisible={false}
+		  message="Resistance is futile"
+	/>
+```
+
+### CrossSpinner
+Basically just wraps [react-native-indicators](https://github.com/n4kz/react-native-indicators) so you can provide the type you want via property. See it in use above. 
+
+The **[styles](https://crossplatformsweden.github.io/react-native-core/modules/_styles_.html)** used are exported for your convenience.
+
+For properties and documentation, see **[API reference - Class CrossSpinner](https://crossplatformsweden.github.io/react-native-core/modules/_components_animations_crossspinner_.html)**. 
+
+
+```typescript
+    <CrossSpinner
+        type={CrossSpinnerType.MaterialIndicator}
+        style={styles.spinner}
+      />
 ```
 
 ## Can not run ShellScript
@@ -374,7 +422,7 @@ The source code is available on the **[Crossplatform GitHub](https://github.com/
 2. Publish the new version on NPM (if not logged in run `npm adduser` first)
 
 ```bash
-	npm publish
+	npm publish --access public
 ```
 
 ### Publish GitHub documentation

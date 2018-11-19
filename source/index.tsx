@@ -1,5 +1,9 @@
-import CrossButton, { ICrossButtonProps } from './components/buttons/CrossButton';
-import CrossBusyIndicator, { IBusyIndicatorProps } from './components/modals/CrossBusyIndicator';
+import CrossButton, {
+  ICrossButtonProps,
+} from './components/buttons/CrossButton';
+import CrossBusyIndicator, {
+  IBusyIndicatorProps,
+} from './components/modals/CrossBusyIndicator';
 import * as styles from './styles';
 import {
   CrossSpinner,
@@ -16,5 +20,4 @@ export {
   CrossSpinner,
   CrossSpinnerType,
   ICrossSpinnerProps,
-
 };

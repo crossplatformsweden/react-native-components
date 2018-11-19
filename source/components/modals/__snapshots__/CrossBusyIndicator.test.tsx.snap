@@ -8,18 +8,15 @@ exports[`components <CrossBusyIndicator /> Should render self and subcomponents 
     isVisible={true}
     onDismiss={[Function]}
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        undefined,
-      ]
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
     }
   >
     <View
@@ -34,7 +31,6 @@ exports[`components <CrossBusyIndicator /> Should render self and subcomponents 
             "paddingRight": 10,
             "paddingTop": 20,
           },
-          undefined,
         ]
       }
     >

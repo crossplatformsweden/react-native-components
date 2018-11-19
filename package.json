@@ -16,13 +16,13 @@
     "test-watch-fast": "node node_modules/jest/bin/jest.js --watchAll -u --collectCoverage=false",
     "test-lint-build": "yarn test && yarn lint && yarn build && yarn docs && yarn gh-pages",
     "npm-version": "./scripts/npm-version.sh",
-    "prepublishOnly": "yarn npm-version && yarn test-lint-build",
-    "preversion": "yarn test-lint-build",
-    "postversion": "git push && git push --tags",
     "docs": "yarn generate-docs && yarn gh-pages",
     "generate-docs": "./scripts/docs.sh",
     "gh-pages": "NODE_DEBUG=gh-pages && yarn gh-clean && gh-pages --dotfiles -d docs",
-    "gh-clean": "node ./node_modules/gh-pages/bin/gh-pages-clean.js"
+    "gh-clean": "node ./node_modules/gh-pages/bin/gh-pages-clean.js",
+    "preversion": "yarn lint && yarn test",
+    "version": "yarn build && git add -A source",
+    "postversion": "git push && git push --tags && yarn docs"
   },
   "repository": {
     "type": "git",
