@@ -314,6 +314,12 @@ export const styles = StyleSheet.create({
     marginTop: 5,
     opacity: 1,
   },
+  modal: {
+    margin: 30,
+    flex: 1,
+    padding: 0,
+    marginTop: 200,
+  },
 });
 
 export const autoCompleteStyles = StyleSheet.create({

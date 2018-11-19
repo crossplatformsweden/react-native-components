@@ -18,9 +18,9 @@ export interface ICrossButtonProps {
    */
   color?: Color;
   /**
-   * Font-Awesome icon name
+   * Font-Awesome 4 icon name
    *
-   * https://fontawesome.com/icons/
+   * https://fontawesome.com/v4.7.0/icons/
    */
   iconName?: string;
   /**
@@ -51,7 +51,7 @@ export interface ICrossButtonProps {
 /**
  * A custom button that displays as an Paper Button with icon or just an icon if {@link ICrossButtonProps.title} is not supplied.
  *
- * Remarks: all icons are {@link https://fontawesome.com/v4.7.0/ FontAwesome v4}.
+ * Remarks: all icons are {@link https://fontawesome.com/v4.7.0/icons/ FontAwesome v4}.
  *
  * Remark: default appearence is "text", see {@link ICrossButtonProps.mode}
  *

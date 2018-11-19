@@ -8,7 +8,7 @@ Beautiful React-Native components using [RN Paper by Callstack](https://github.c
 
 These are some of the common use components [Crossplatform](https://www.crossplatform.se/) use in our projects.
 
-The components currently use **FontAwesome v4 icons**. Ability to customize this might be added.
+The components currently use **[FontAwesome v4 icons](https://fontawesome.com/v4.7.0/icons/)**. Ability to customize this might be added.
 
 ---
 
@@ -17,7 +17,8 @@ The components currently use **FontAwesome v4 icons**. Ability to customize this
 
 [![Build status](https://img.shields.io/azure-devops/build/crossplatformsweden/parkeraapp/15.svg)](https://crossplatformsweden.visualstudio.com/ParkeraApp/_build/latest?definitionId=15) 
 [![codecov](https://codecov.io/gh/crossplatformsweden/react-native-core/branch/master/graph/badge.svg)](https://codecov.io/gh/crossplatformsweden/react-native-core) 
-[![dependencies Status](https://david-dm.org/crossplatformsweden/react-native-core/status.svg)](https://david-dm.org/crossplatformsweden/react-native-core) 
+[![dependencies](https://david-dm.org/crossplatformsweden/react-native-core/status.svg)](https://david-dm.org/crossplatformsweden/react-native-core) 
+[![peer dependencies](https://img.shields.io/david/peer/crossplatformsweden/react-native-core.svg)](https://github.com/crossplatformsweden/react-native-core)
 [![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 ![GitHub](https://img.shields.io/github/license/crossplatformsweden/react-native-core.svg) 
 
@@ -34,6 +35,7 @@ The components currently use **FontAwesome v4 icons**. Ability to customize this
 - [Crossplatform React-Native-Core](#crossplatform-react-native-core)
   * [Table of Contents](#table-of-contents)
   * [Install](#install)
+    + [Important Icons!](#important-icons-)
   * [Documentation](#documentation)
   * [Components](#components)
     + [CrossButton](#crossbutton)
@@ -70,14 +72,29 @@ The components currently use **FontAwesome v4 icons**. Ability to customize this
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Install
+Install with [react-native-paper](https://github.com/callstack/react-native-paper) if you don't already have it.
+
 ```bash
+	npm i react-native-paper 
 	npm i @crossplatform/react-native-core
 ```
 
 Or if you're hanging with the cool kids
 
 ```bash
+	yarn add react-native-paper 
 	yarn add @crossplatform/react-native-core
+```
+
+### Important Icons!
+
+[**React-Native-Vector-Icons**](https://github.com/oblador/react-native-vector-icons) is required if you're not using **[Expo](https://www.expo.io/)**.
+
+```bash
+	npm i react-native-vector-icons 
+```
+```bash
+	yarn add react-native-vector-icons
 ```
 
 ## Documentation
@@ -93,31 +110,31 @@ Renders an **[FontAwesome Button](https://github.com/oblador/react-native-vector
 
 For properties and documentation, see **[API reference - Class CrossButton](https://crossplatformsweden.github.io/react-native-core/classes/_components_buttons_crossbutton_.crossbutton.html)**. 
 
-Button with **title**, but no icon:
+Button with **title**, but no icon and mode `contained` (background color):
 
 ```typescript
 	import { CrossButton } from '@crossplatform/react-native-core';
 	
 	export const ButtonComp => () => (
-		<CrossButton
-	      title="Log out"
-	      onPress={() => console.log('logging out')}
-	    />
+ 		<CrossButton
+            title="Click me"
+            mode="contained"
+            onPress={() => OnButtonPress('Pressed button with no icon')}
+          />
 	);
 ```
 
-Button with **title** and **icon**:
+Button with **title** and **icon**, default `text` mode (no background):
 
 ```typescript
 	import { CrossButton } from '@crossplatform/react-native-core';
 	
 	export const ButtonComp => () => (
-		<CrossButton
-			onPress={() => console.log('logging in')}
-			mode='contained'
-			title='Log in'
-			iconName='sign-in'
-		/>
+          <CrossButton
+            title="Click me"
+            iconName="home"
+            onPress={() => OnButtonPress('Pressed button with icon')}
+          />
 	);
 ```
 	
@@ -127,10 +144,11 @@ Clickable icon:
 	import { CrossButton } from '@crossplatform/react-native-core';
 	
 	export const ButtonComp => () => (
-		<CrossButton
-		  onPress={() => console.log('navigating')}
-		  iconName='map'
-		/>
+          <CrossButton
+            iconName="map"
+            onPress={() => OnButtonPress('Pressed icon with no title')}
+            backgroundColor="transparent"
+          />
 	);
 ```
 
@@ -223,11 +241,11 @@ Install global CLI tools required by the project
 
 ## yarn lint
 
-Executes `./lint.sh` from root that runs **prettier** and **tslint** code formatting, fixing inconsistencies.
+Executes `lint.sh` that runs **prettier** and **tslint** code formatting, fixing inconsistencies.
 
 ## yarn build
 
-Start **TypeScript** compiler. Run at least once to generate **/dist** folder where JavaScript resides. You can also...
+Start **TypeScript** compiler. Run at least once to generate **/lib** folder where JavaScript resides. You can also...
 
 ## yarn build-watch
 
@@ -271,20 +289,26 @@ Up the NPM package version before running `npm publish`. Automatically run as `p
 
 Use VS Code's debugging capabilities to maintain a effective development cycle.
 
-**`Launch.json`** configuration is not checked in, but here is the debug `launch.json` for generation:
+**`Launch.json`** configuration is not checked in, but here is the debug `launch.json` for React-Native
 
 ```json
         {
-            "type": "node",
+            "name": "Attach to packager",
+            "program": "${workspaceRoot}/.vscode/launchReactNative.js",
+            "type": "reactnative",
+            "request": "attach",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/.vscode/.react"
+        },
+        {
+            "name": "Debug in Expo",
+            "program": "${workspaceRoot}/.vscode/launchReactNative.js",
+            "type": "reactnative",
             "request": "launch",
-            "name": "Generate Files",
-            "program": "${workspaceRoot}/generation/lib/generateFiles.js"
-        }
-```
-
-For **mobile** you can use tasks like these:
-
-```json
+            "platform": "exponent",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/.vscode/.react"
+        },
         {
             "name": "Debug Android",
             "program": "${workspaceRoot}/.vscode/launchReactNative.js",
@@ -343,11 +367,15 @@ The source code is available on the **[Crossplatform GitHub](https://github.com/
 ## Publish new version
 1. Update the version. This will also run build and linting.
 
+```bash
 	yarn npm-version
+```
 
 2. Publish the new version on NPM (if not logged in run `npm adduser` first)
 
+```bash
 	npm publish
+```
 
 ### Publish GitHub documentation
 Generate documentation using the `docs`command
@@ -379,13 +407,13 @@ In some cases, this is less than ideal. This might be the case if you need to ru
 
 Mac and Linux:
 
-```
+```bash
 REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname' npm start
 ```
 
 Windows:
 
-```
+```bash
 set REACT_NATIVE_PACKAGER_HOSTNAME='my-custom-ip-address-or-hostname'
 npm start
 ```

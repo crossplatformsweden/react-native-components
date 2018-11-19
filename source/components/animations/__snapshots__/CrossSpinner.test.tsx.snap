@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossSpinner /> \`CrossSpinnerType\` enum Should match snapshot 1`] = `
+Object {
+  "BallIndicator": "BallIndicator",
+  "BarIndicator": "BarIndicator",
+  "DotIndicator": "DotIndicator",
+  "MaterialIndicator": "MaterialIndicator",
+  "PacmanIndicator": "PacmanIndicator",
+  "PulseIndicator": "PulseIndicator",
+  "SkypeIndicator": "SkypeIndicator",
+  "UIActivityIndicator": "UIActivityIndicator",
+  "WaveIndicator": "WaveIndicator",
+}
+`;
+
+exports[`components <CrossSpinner /> Component should render 1`] = `
+<View
+  color="blue"
+  count={8}
+  size={64}
+  style={null}
+  testID="BallIndicator"
+  type="BallIndicator"
+/>
+`;

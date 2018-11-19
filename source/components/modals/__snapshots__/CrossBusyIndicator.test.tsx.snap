@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossBusyIndicator /> Should render self and subcomponents 1`] = `
+<View
+  testID="1"
+>
+  <View
+    isVisible={true}
+    onDismiss={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+          },
+          Object {
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "column",
+              "justifyContent": "flex-start",
+            },
+          ]
+        }
+      >
+        <View
+          color="#057dc2"
+          count={8}
+          size={40}
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "flexDirection": "row",
+              "height": 50,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 50,
+            }
+          }
+          testID="BallIndicator"
+          type="BallIndicator"
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "column",
+              "justifyContent": "flex-start",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#057dc2",
+                "fontSize": 20,
+                "fontWeight": "normal",
+                "marginTop": 5,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#057dc2",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                  "marginTop": 5,
+                  "opacity": 1,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#ff0000",
+                },
+                undefined,
+              ]
+            }
+            testID="cancelText"
+          >
+            Cancel
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
