@@ -82,11 +82,27 @@
 						</dd>
 						<dt>example</dt>
 						<dd><pre><code>&lt;CrossBusyIndicator
-isBusy={isBusy}
+key=<span class="hljs-string">"busy1"</span>
+testID=<span class="hljs-string">"busy1"</span>
+isBusy={this.state.isBusy}
 type={CrossSpinnerType.PacmanIndicator}
 isCancelButtonVisible={true}
 message=<span class="hljs-string">"Loading.."</span>
-onCancel={() =&gt; (isBusy = false)}
+onCancel={() =&gt; this.setState({ isBusy: false })}
+/&gt;</code></pre><p>Non cancellable and custom styles</p>
+						</dd>
+						<dt>example</dt>
+						<dd><pre><code>&lt;CrossBusyIndicator
+key=<span class="hljs-string">"busy2"</span>
+testID=<span class="hljs-string">"busy2"</span>
+spinnerProps={{
+<span class="hljs-section">color: 'red',</span>
+<span class="hljs-section">type: CrossSpinnerType.WaveIndicator</span>
+}}
+messageStyle={{color: 'red'}}
+isBusy={this.state.isBusy2}
+isCancelButtonVisible={false}
+message=<span class="hljs-string">"Resistance is futile"</span>
 /&gt;</code></pre></dd>
 					</dl>
 				</div>
@@ -175,7 +191,7 @@ onCancel={() =&gt; (isBusy = false)}
 							<aside class="tsd-sources">
 								<p>Overrides Component.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/ef9947d/source/components/modals/CrossBusyIndicator.tsx#L114">components/modals/CrossBusyIndicator.tsx:114</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/668968a/source/components/modals/CrossBusyIndicator.tsx#L133">components/modals/CrossBusyIndicator.tsx:133</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -761,7 +777,7 @@ class Foo extends React.Component {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/ef9947d/source/components/modals/CrossBusyIndicator.tsx#L123">components/modals/CrossBusyIndicator.tsx:123</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/668968a/source/components/modals/CrossBusyIndicator.tsx#L139">components/modals/CrossBusyIndicator.tsx:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -779,7 +795,7 @@ class Foo extends React.Component {
 							<aside class="tsd-sources">
 								<p>Overrides Component.render</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/ef9947d/source/components/modals/CrossBusyIndicator.tsx#L133">components/modals/CrossBusyIndicator.tsx:133</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-core/blob/668968a/source/components/modals/CrossBusyIndicator.tsx#L149">components/modals/CrossBusyIndicator.tsx:149</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span></h4>
