@@ -16,5 +16,5 @@ export {
   CrossSpinner,
   CrossSpinnerType,
   ICrossSpinnerProps,
-  
+
 };

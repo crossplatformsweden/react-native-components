@@ -34,20 +34,26 @@ export enum CrossSpinnerType {
   WaveIndicator = 'WaveIndicator',
 }
 
+/**
+ * Properties for the {@link CrossSpinner} component
+ */
 export interface ICrossSpinnerProps extends BallIndicatorProps {
   /**
-   * {@link IndicatorType}
+   * Type of animatoon
+   * {@link CrossSpinnerType}
    */
   type: CrossSpinnerType;
   /**
    * Optional custom styles
    */
   style?: any;
-  testID?: string|undefined;
+  testID?: string | undefined;
 }
 
 /**
  * Generates a React-Native spinning busy indicator
+ *
+ * Properties are {@link ICrossSpinnerProps}
  *
  * https://github.com/n4kz/react-native-indicators
  *
@@ -59,7 +65,7 @@ export const CrossSpinner = ({
   color = Colors.CrossLightBlue,
   count = 8,
   size = 40,
-  testID = type.toString()
+  testID = type.toString(),
 }: ICrossSpinnerProps) => {
   const props: ICrossSpinnerProps = {
     type,
@@ -67,7 +73,7 @@ export const CrossSpinner = ({
     count,
     size,
     color,
-    testID
+    testID,
   };
   switch (type) {
     case 'BallIndicator':

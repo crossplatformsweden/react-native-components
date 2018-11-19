@@ -89,18 +89,18 @@ export interface IBusyIndicatorProps {
 /**
  * @description
  * Displays a modal with busy indicator (spinner) and message when {@link IBusyIndicatorProps.isBusy} is `true`
- * 
+ *
  * Properties are {@link IBusyIndicatorProps}
- * 
+ *
  * Also supports cancelling the modal using properties
- * {@link IBusyIndicatorProps.isCancelButtonVisible}, 
+ * {@link IBusyIndicatorProps.isCancelButtonVisible},
  * {@link IBusyIndicatorProps.cancelText} and
  * {@link IBusyIndicatorProps.onCancel}.
  * This does however not hide the modal.
- * 
+ *
  * Modal with cancel
  * @example
- * 
+ *
  ```
     <CrossBusyIndicator
       isBusy={isBusy}
