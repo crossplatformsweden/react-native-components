@@ -39,6 +39,8 @@ The components currently use **[FontAwesome v4 icons](https://fontawesome.com/v4
   * [Documentation](#documentation)
   * [Components](#components)
     + [CrossButton](#crossbutton)
+    + [CrossBusyIndicator](#crossbusyindicator)
+    + [CrossSpinner](#crossspinner)
   * [Can not run ShellScript](#can-not-run-shellscript)
 - [Tools](#tools)
   * [Java](#java)
@@ -171,7 +173,7 @@ Feedback `message` and *PacmanIndicator* `type` (because, why not).
 	/>
 ```
 
-Non-cancellable and custon styles for `spinnerProps` and `messageStyle`:
+Non-cancellable and custom styles for `spinnerProps` and `messageStyle`:
 
 ```typescript
 	<CrossBusyIndicator
@@ -186,7 +188,9 @@ Non-cancellable and custon styles for `spinnerProps` and `messageStyle`:
 ```
 
 ### CrossSpinner
-Basically just wraps [react-native-indicators](https://github.com/n4kz/react-native-indicators) so you can provide the type you want via property. See it in use above. 
+Basically just wraps [react-native-indicators](https://github.com/n4kz/react-native-indicators) so you can provide the type you want via property.
+
+See it in use above. 
 
 The **[styles](https://crossplatformsweden.github.io/react-native-core/modules/_styles_.html)** used are exported for your convenience.
 
