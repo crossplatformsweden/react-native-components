@@ -262,6 +262,7 @@ For properties and documentation, see **[API reference - Class CrossLabel](https
       isParagraph = true
     </CrossLabel>
 ```
+
 **Subheading** component with URL link using **[onPressUrlTarget](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_labels_crosslabel_.icrosslabelprops.html#onpressurltarget)** property
 
 ```typescript
@@ -274,6 +275,16 @@ For properties and documentation, see **[API reference - Class CrossLabel](https
     </CrossLabel>
 ```
 
+Regular **onPress** event:
+
+```typescript
+    <CrossLabel
+      onPress={() => Message('CrossLabel onPress')}
+      style={{ marginTop: 20, marginBottom: 10 }}
+    >
+      onPress message
+    </CrossLabel>
+```
 
 ## Can not run ShellScript
 
