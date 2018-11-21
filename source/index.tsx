@@ -4,7 +4,7 @@ import CrossButton, {
 import CrossBusyIndicator, {
   IBusyIndicatorProps,
 } from './components/modals/CrossBusyIndicator';
-import * as styles from './styles';
+import { styles, Colors, TabIconSize, Theme } from './styles';
 import CrossLabel from './components/labels/CrossLabel';
 import { ICrossLabelProps } from './components/labels/CrossLabel';
 import {
@@ -19,9 +19,12 @@ export {
   IBusyIndicatorProps,
   ICrossButtonProps,
   styles,
+  Colors,
+  TabIconSize,
+  Theme,
   CrossSpinner,
   CrossSpinnerType,
   ICrossSpinnerProps,
   CrossLabel,
-  ICrossLabelProps
+  ICrossLabelProps,
 };
