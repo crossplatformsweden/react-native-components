@@ -263,7 +263,7 @@ For properties and documentation, see **[API reference - Class CrossLabel](https
     </CrossLabel>
 ```
 
-**Subheading** component with URL link using **[onPressUrlTarget](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_labels_crosslabel_.icrosslabelprops.html#onpressurltarget)** property
+URL link using **[onPressUrlTarget](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_labels_crosslabel_.icrosslabelprops.html#onpressurltarget)** property. You can also set color using **[linkColor](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_labels_crosslabel_.icrosslabelprops.html#linkcolor)**.
 
 ```typescript
     <CrossLabel
