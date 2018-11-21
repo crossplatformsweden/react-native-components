@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossLabel /> \`ICrossLabelProps\` interface Should match snapshot 1`] = `Object {}`;
+
+exports[`components <CrossLabel /> Component should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {},
+        undefined,
+        Object {},
+      ]
+    }
+  />
+</View>
+`;

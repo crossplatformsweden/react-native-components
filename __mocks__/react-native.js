@@ -15,7 +15,7 @@ module.exports = ({
   Text: 'Text',
   Button: 'Button',
   ScrollView: 'View',
-  Linking: { openURL: jest.fn() },
+  Linking: { openURL: (url) => {console.log('Lingking.openURL', url)}},
   AsyncStorage: {
     setItem: () => new Promise((resolve) => resolve(), null),
     getItem: (key) =>

@@ -52,7 +52,7 @@ describe('components', () => {
       it('Should have paper <Button />', () => {
         const wrapper = setup('home', 'home');
         const child = wrapper.root.findByProps({ mode: 'text' });
-        expect(child.type).toEqual('View');
+        expect(child.type).toEqual('Button');
       });
 
       it('Should have paper `<Button />` with `mode` property set to "text"', () => {

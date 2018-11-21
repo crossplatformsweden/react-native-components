@@ -22,7 +22,7 @@
     "gh-clean": "node ./node_modules/gh-pages/bin/gh-pages-clean.js",
     "preversion": "yarn lint && yarn test",
     "version": "yarn build && git add -A source",
-    "postversion": "git push && git push --tags && yarn docs"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

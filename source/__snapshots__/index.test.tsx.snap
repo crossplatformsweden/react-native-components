@@ -9,7 +9,7 @@ exports[`components Index should have <CrossButton /> Component should render 1`
     }
   }
 >
-  <View
+  <Button
     color="blue"
     disabled={false}
     icon={[Function]}
@@ -26,6 +26,6 @@ exports[`components Index should have <CrossButton /> Component should render 1`
     title="home"
   >
     home
-  </View>
+  </Button>
 </View>
 `;

@@ -36,7 +36,7 @@ exports[`components <CrossButton /> With \`title\` and \`iconName\` properties p
     }
   }
 >
-  <View
+  <Button
     color="blue"
     disabled={false}
     icon={[Function]}
@@ -53,6 +53,6 @@ exports[`components <CrossButton /> With \`title\` and \`iconName\` properties p
     title="home"
   >
     home
-  </View>
+  </Button>
 </View>
 `;

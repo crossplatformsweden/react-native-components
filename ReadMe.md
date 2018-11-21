@@ -104,6 +104,8 @@ See our GitHub Pages generated from code comments. This documentation is also av
 
 * **[API Documnentation](https://crossplatformsweden.github.io/react-native-core/)**
 
+The **[styles](https://crossplatformsweden.github.io/react-native-core/modules/_styles_.html)** used by this library are exported for your convenience.
+
 ## Components
 ### CrossButton
 ![](https://media.giphy.com/media/MohS56wPG7AgPGteu1/giphy.gif)
@@ -112,7 +114,9 @@ Renders an [FontAwesome Button](https://github.com/oblador/react-native-vector-i
 
 For properties and documentation, see **[API reference - Class CrossButton](https://crossplatformsweden.github.io/react-native-core/classes/_components_buttons_crossbutton_.crossbutton.html)**. 
 
-Button with **title**, but no icon and mode `contained` (background color):
+**Examples**
+
+Button with **[title](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#type)**, but no icon and **[mode](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#mode)** *contained* (background color):
 
 ```typescript
 	import { CrossButton } from '@crossplatform/react-native-core';
@@ -126,7 +130,7 @@ Button with **title**, but no icon and mode `contained` (background color):
 	);
 ```
 
-Button with **title** and **icon**, default `text` mode (no background):
+Button with **[title](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#type)** and **[iconName](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#iconname)**, default *text* **[mode](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#mode)** (no background):
 
 ```typescript
 	import { CrossButton } from '@crossplatform/react-native-core';
@@ -161,7 +165,9 @@ Renders a [react-native-modal](https://github.com/react-native-community/react-n
 
 For properties and documentation, see **[API reference - Class CrossBusyIndicator](https://crossplatformsweden.github.io/react-native-core/classes/_components_modals_crossbusyindicator_.crossbusyindicator.html)**. 
 
-Feedback `message` and *PacmanIndicator* `type` (because, why not).
+**Examples**
+
+Feedback **[message](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#message)** and *PacmanIndicator* **[type](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#type)** (because, why not).
 
 ```typescript
 	<CrossBusyIndicator
@@ -188,14 +194,14 @@ Non-cancellable and custom styles for `spinnerProps` and `messageStyle`:
 ```
 
 ### CrossSpinner
+[![](https://user-images.githubusercontent.com/2055622/28246049-e82c70e8-6a1b-11e7-93cc-8aa6d0d19867.gif)](https://github.com/n4kz/react-native-indicators)
+
 Basically just wraps [react-native-indicators](https://github.com/n4kz/react-native-indicators) so you can provide the type you want via property.
-
-See it in use above. 
-
-The **[styles](https://crossplatformsweden.github.io/react-native-core/modules/_styles_.html)** used are exported for your convenience.
 
 For properties and documentation, see **[API reference - Class CrossSpinner](https://crossplatformsweden.github.io/react-native-core/modules/_components_animations_crossspinner_.html)**. 
 
+
+**Examples**
 
 ```typescript
     <CrossSpinner
@@ -203,6 +209,71 @@ For properties and documentation, see **[API reference - Class CrossSpinner](htt
         style={styles.spinner}
       />
 ```
+
+### CrossLabel
+![](https://media.giphy.com/media/9uI8mhykeGr65G97Iq/giphy.gif)
+
+Wraps [react-native-paper](https://callstack.github.io/react-native-paper/index.html) typhography components and can also act as a clickable text link.
+
+For properties and documentation, see **[API reference - Class CrossLabel](https://crossplatformsweden.github.io/react-native-core/modules/_components_labels_crosslabel_.html)**.
+
+**Examples**
+
+**Headline** component:
+
+```typescript
+    <CrossLabel isHeadline={true}>Crossplatform (isHeadline=true)</CrossLabel>
+```
+
+**Title** component:
+
+```typescript
+    <CrossLabel isTitle={true}>&lt;CrossLabel isTitle=true&gt;</CrossLabel>
+```
+
+**Subheading** (with custom style):
+
+```typescript
+    <CrossLabel
+      isSubheading={true}
+      style={{ marginTop: 5 }}
+    >
+      isSubHeading = true
+    </CrossLabel>
+```
+**Caption** component (with custom style):
+
+```typescript
+    <CrossLabel
+      isCaption={true}
+      style={{ color: Colors.CrossLightBlue, marginTop: 10 }}
+    >
+      isCaption=true, custom color
+    </CrossLabel>
+```
+
+**Paragraph** component (with custom style):
+
+```typescript
+    <CrossLabel
+      isParagraph={true}
+      style={{ marginTop: 5 }}
+    >
+      isParagraph = true
+    </CrossLabel>
+```
+**Subheading** component with URL link using **[onPressUrlTarget](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_labels_crosslabel_.icrosslabelprops.html#onpressurltarget)** property
+
+```typescript
+    <CrossLabel
+      onPressUrlTarget="https://www.typescriptlang.org/"
+      isSubheading={true}
+      style={{ marginTop: 20, marginBottom: 10 }}
+    >
+      Clickable link (onPressUrlTarget):
+    </CrossLabel>
+```
+
 
 ## Can not run ShellScript
 
