@@ -19,9 +19,9 @@ import _ from 'lodash';
 
 /**
  * Properties for the {@link CrossLabel} component. Control component type using {@link isTitle}, {@link isCaption}, {@link isHeadline}, {@link isSubheading} and {@link isParagraph}.
- * 
+ *
  * Create an URL link using {@link onPressUrlTarget} and customize color using {@link linkColor}.
- * 
+ *
  * Inherits react-native Text's {@link https://facebook.github.io/react-native/docs/text.html#props TextProps}
  */
 export interface ICrossLabelProps extends TextProps {
