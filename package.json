@@ -1,6 +1,6 @@
 {
   "name": "@crossplatform/react-native-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Beautiful React-Native components using RN Paper by Callstack",
   "main": "lib/index.js",
   "scripts": {
