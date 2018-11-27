@@ -1,7 +1,7 @@
 import React from 'react';
 // @ts-ignore
 import { Button } from 'react-native-paper';
-import { ViewStyle, StyleProp, View, ButtonProps } from 'react-native';
+import { ViewStyle, StyleProp, View, TextStyle } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Color } from 'csstype';
 import _ from 'lodash';
@@ -18,7 +18,7 @@ export interface ICrossButtonProps {
    */
   color?: Color;
   /**
-   * Font-Awesome 4 icon name
+   * Font-Awesome 4 icon name using `react-native-vector-icons/FontAwesome`
    *
    * https://fontawesome.com/v4.7.0/icons/
    */
@@ -27,7 +27,23 @@ export interface ICrossButtonProps {
    * Background color. Default value is {@link Colors.NextButton} if {@link title} was supplied
    */
   backgroundColor?: Color;
+  /**
+   * Style for outer container.
+   *
+   * See also {@link iconStyle}, {@link buttonStyle}
+   */
   style?: StyleProp<ViewStyle>;
+  /**
+   * Optional style for the icons. See also {@link iconName}
+   *
+   * See also {@link buttonStyle}, {@link style}
+   */
+  iconStyle?: ViewStyle | TextStyle;
+  /**
+   * Title for the button. If not supplied a clickable icon will be displayed instead of react-native-paper button
+   *
+   * https://callstack.github.io/react-native-paper/button.html
+   */
   title?: string;
   /**
    * Size of the icon
@@ -41,9 +57,11 @@ export interface ICrossButtonProps {
    */
   mode?: 'text' | 'outlined' | 'contained';
   /**
-   * Optional button styles to apply
+   * Optional button styles to apply to {@link https://callstack.github.io/react-native-paper/button.html Button}.
+   *
+   * See also {@link iconStyle}, {@link style}
    */
-  buttonStyle?: ButtonProps;
+  buttonStyle?: StyleProp<ViewStyle>;
   onPress?: () => void;
   compact?: boolean;
 }
@@ -61,11 +79,11 @@ export class CrossButton extends React.Component<ICrossButtonProps> {
   render() {
     const mode = this.props.mode || 'text';
     return (
-      <View style={styles.container}>
+      <View style={this.props.style ? this.props.style : styles.container}>
         {_.isNil(this.props.title) && !_.isNil(this.props.iconName) ? (
           <FontAwesome.Button
             {...this.props}
-            style={(this.props.style as ViewStyle) || styles.container}
+            style={this.props.iconStyle || styles.container as ViewStyle}
             onPress={() => {
               if (this.props.onPress) {
                 this.props.onPress();
@@ -89,7 +107,7 @@ export class CrossButton extends React.Component<ICrossButtonProps> {
                 />
               ) : null
             }
-            style={this.props.style || this.props.buttonStyle || styles.button}
+            style={this.props.buttonStyle || styles.button}
             onPress={
               this.props.onPress
                 ? this.props.onPress

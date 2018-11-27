@@ -8,7 +8,7 @@ Beautiful React-Native components using [RN Paper by Callstack](https://github.c
 
 These are some of the common use components [Crossplatform](https://www.crossplatform.se/) use in our projects.
 
-The components currently use **[FontAwesome v4 icons](https://fontawesome.com/v4.7.0/icons/)**. Ability to customize this might be added.
+* **[Important Icons!](#important-icons-)**
 
 ---
 
@@ -23,7 +23,10 @@ The components currently use **[FontAwesome v4 icons](https://fontawesome.com/v4
 ![GitHub](https://img.shields.io/github/license/crossplatformsweden/react-native-core.svg) 
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.57-blue.svg)](https://facebook.github.io/react-native/) 
-[![React Navigation V2](https://img.shields.io/badge/React%20Navigation-v2.18.2-blue.svg)](https://reactnavigation.org/) 
+[![React Native Paper](https://img.shields.io/badge/React%20Native%20Paper-v2.2.4-blue.svg)](https://github.com/callstack/react-native-paper) 
+[![React Native Vector Icons](https://img.shields.io/badge/React%20Native%20Vector%20Icons-v4.5.0-blue.svg)](https://github.com/oblador/react-native-vector-icons) 
+[![React Native Indicators](https://img.shields.io/badge/React%20Native%20Indicators-v0.13.0-blue.svg)](https://github.com/n4kz/react-native-indicators) 
+[![React Native Modal](https://img.shields.io/badge/React%20Native%20Modal-v7.0.0-blue.svg)](https://github.com/react-native-community/react-native-modal) 
 
 [![GitHub forks](https://img.shields.io/github/forks/crossplatformsweden/react-native-core.svg?style=social&label=Fork)](https://github.com/crossplatformsweden/react-native-core)
 [![GitHub stars](https://img.shields.io/github/stars/crossplatformsweden/react-native-core.svg?style=social&label=Star)](https://github.com/crossplatformsweden/react-native-core)
@@ -83,15 +86,21 @@ Or if you're hanging with the cool kids
 	yarn add @crossplatform/react-native-core
 ```
 
-### Important Icons!
+### Important Icons! 
 
-[**React-Native-Vector-Icons**](https://github.com/oblador/react-native-vector-icons) is required if you're not using **[Expo](https://www.expo.io/)**.
+When using [Expo](https://www.expo.io/) icons are bundled. When ejected you need to install these yourself.
+
+Note that version of [**React-Native-Vector-Icons**](https://github.com/oblador/react-native-vector-icons) is bound by [Expo](https://www.expo.io) for compatibility.
+
+The iconset used is currently [FontAwesome v4 icons](https://fontawesome.com/v4.7.0/icons/). Ability to customize which iconset is used might be added. 
+
+If you're **not** using [Expo](https://www.expo.io/):
 
 ```bash
-	npm i react-native-vector-icons 
+	npm i react-native-vector-icons@4.5.0 
 ```
 ```bash
-	yarn add react-native-vector-icons
+	yarn add react-native-vector-icons@4.5.0
 ```
 
 ## Documentation
@@ -108,6 +117,8 @@ The **[styles](https://crossplatformsweden.github.io/react-native-core/modules/_
 Renders an [FontAwesome Button](https://github.com/oblador/react-native-vector-icons#iconbutton-component) if only `iconName` is supplied, else an [Paper Button](https://callstack.github.io/react-native-paper/button.html).
 
 For properties and documentation, see **[API reference - Class CrossButton](https://crossplatformsweden.github.io/react-native-core/classes/_components_buttons_crossbutton_.crossbutton.html)**. 
+
+Styles can be customized using [ButtonStyle, IconStyle and style properties](https://crossplatformsweden.github.io/react-native-core/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html).
 
 **Examples**
 

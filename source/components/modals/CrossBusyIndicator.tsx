@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   StyleProp,
   ViewStyle,
-  TextStyle,
+  TextStyle
 } from 'react-native';
 import { Colors } from '../../styles';
 import Modal from 'react-native-modal';
