@@ -7,7 +7,6 @@
 Beautiful React-Native **[Components](#components)** using [RN Paper by Callstack](https://github.com/callstack/react-native-paper) and other libraries. If using a paper provider your theme should be applied to all the components.
 
 **Package renamed**  
-Previous package name: `@crossplatform/react-native-components`  
 New package name: `react-native-cross-components`
 
 These are some of the common use components [Crossplatform](https://www.crossplatform.se/) use in our projects.
@@ -16,8 +15,8 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 
 ---
 
-[![npm](https://img.shields.io/npm/v/@crossplatform/react-native-components.svg)](https://www.npmjs.com/package/@crossplatform/react-native-components) 
-[![npm](https://img.shields.io/npm/dt/@crossplatform/react-native-components.svg)](https://www.npmjs.com/package/@crossplatform/react-native-components) 
+[![npm](https://img.shields.io/npm/v/react-native-cross-components.svg)](https://www.npmjs.com/package/react-native-cross-components) 
+[![npm](https://img.shields.io/npm/dt/react-native-cross-components.svg)](https://www.npmjs.com/package/react-native-cross-components) 
 
 [![Build status](https://img.shields.io/azure-devops/build/crossplatformsweden/parkeraapp/15.svg)](https://crossplatformsweden.visualstudio.com/ParkeraApp/_build/latest?definitionId=15) 
 [![codecov](https://codecov.io/gh/crossplatformsweden/react-native-components/branch/master/graph/badge.svg)](https://codecov.io/gh/crossplatformsweden/react-native-components) 
@@ -136,7 +135,7 @@ Styles can be customized using [ButtonStyle, IconStyle and style properties](htt
 Button with **[title](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#type)**, but no icon and **[mode](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#mode)** *contained* (background color):
 
 ```typescript
-	import { CrossButton } from '@crossplatform/react-native-components';
+	import { CrossButton } from 'react-native-cross-components';
 	
 	export const ButtonComp => () => (
  		<CrossButton
@@ -150,7 +149,7 @@ Button with **[title](https://crossplatformsweden.github.io/react-native-compone
 Button with **[title](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#type)** and **[iconName](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#iconname)**, default *text* **[mode](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_buttons_crossbutton_.icrossbuttonprops.html#mode)** (no background):
 
 ```typescript
-	import { CrossButton } from '@crossplatform/react-native-components';
+	import { CrossButton } from 'react-native-cross-components';
 	
 	export const ButtonComp => () => (
           <CrossButton
@@ -164,7 +163,7 @@ Button with **[title](https://crossplatformsweden.github.io/react-native-compone
 Clickable icon:
 
 ```typescript
-	import { CrossButton } from '@crossplatform/react-native-components';
+	import { CrossButton } from 'react-native-cross-components';
 	
 	export const ButtonComp => () => (
           <CrossButton
@@ -528,7 +527,7 @@ And finally Jest Test debugging:
 
 The project is released through NPM
 
-[![npm](https://img.shields.io/npm/v/@crossplatform/react-native-components.svg)](https://www.npmjs.com/package/@crossplatform/react-native-components) 
+[![npm](https://img.shields.io/npm/v/react-native-cross-components.svg)](https://www.npmjs.com/package/react-native-cross-components) 
 
 The source code is available on the **[Crossplatform GitHub](https://github.com/crossplatformsweden/react-native-components)**.
 
