@@ -307,9 +307,11 @@ Regular **onPress** event:
 
 A [Paper TextInput](https://callstack.github.io/react-native-paper/text-input.html) that also supports masking using [react-native-masked-input](https://github.com/benhurott/react-native-masked-text).
 
-For properties and documentation, see **[API reference - Class CrossEditor](https://crossplatformsweden.github.io/react-native-components/classes/_components_modals_crossbusyindicator_.crossbusyindicator.html)**. 
+For properties and documentation, see **[API reference - Class CrossEditor](https://crossplatformsweden.github.io/react-native-components/modules/_components_input_crosseditor_.html)**. 
 
 **Examples**
+
+Basic usage
 
 ```typescript
 	<CrossEditor
@@ -318,6 +320,13 @@ For properties and documentation, see **[API reference - Class CrossEditor](http
         value={'Textvalue'}
         />
 ```
+
+Masked input usage. For `maskProps` documentation see [react-native-masked-input](https://github.com/benhurott/react-native-masked-text).
+
+```typescript
+	<CrossEditor label="Phone" maskProps={{ type: 'cel-phone' }} />
+```
+
 
 ## Can not run ShellScript
 
