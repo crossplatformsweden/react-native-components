@@ -7,6 +7,8 @@ import CrossBusyIndicator, {
 import { styles, Colors, TabIconSize, Theme } from './styles';
 import CrossLabel from './components/labels/CrossLabel';
 import { ICrossLabelProps } from './components/labels/CrossLabel';
+import CrossEditor from './components/input/CrossEditor';
+import { ICrossEditorProps } from './components/input/CrossEditor';
 import {
   CrossSpinner,
   CrossSpinnerType,
@@ -27,4 +29,6 @@ export {
   ICrossSpinnerProps,
   CrossLabel,
   ICrossLabelProps,
+  CrossEditor,
+  ICrossEditorProps
 };
