@@ -3926,6 +3926,10 @@ mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment@2.19.3:
+  version "2.19.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.3.tgz#bdb99d270d6d7fda78cc0fbace855e27fe7da69f"
+
 moment@^2.22.2:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
@@ -4615,6 +4619,13 @@ react-native-indicators@^0.13.0:
   resolved "https://registry.yarnpkg.com/react-native-indicators/-/react-native-indicators-0.13.0.tgz#001824bba194b1ca6e654d903beaf0168d4e6ac8"
   dependencies:
     prop-types "^15.5.10"
+
+react-native-masked-text@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/react-native-masked-text/-/react-native-masked-text-1.9.2.tgz#184f661025a77608f30ebcda27f416be67968b27"
+  dependencies:
+    moment "2.19.3"
+    tinymask "^1.0.2"
 
 react-native-modal@^7.0.0:
   version "7.0.0"
@@ -5584,6 +5595,10 @@ through@^2.3.6:
 time-stamp@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
+
+tinymask@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tinymask/-/tinymask-1.0.2.tgz#df3775a94087b0d3d056c256e8923c01b7ec0941"
 
 tmp@^0.0.33:
   version "0.0.33"

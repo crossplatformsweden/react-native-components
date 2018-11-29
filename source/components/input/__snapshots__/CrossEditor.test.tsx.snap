@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <CrossEditor /> \`ICrossEditorProps\` interface Should match snapshot 1`] = `
+Object {
+  "label": "Test",
+}
+`;
+
+exports[`components <CrossEditor /> With \`label\` property provided Component should render 1`] = `
+<TextInput
+  label="Test"
+  mode="outlined"
+  onChangeText={[MockFunction]}
+  value="Textvalue"
+/>
+`;

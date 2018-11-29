@@ -19,6 +19,15 @@ function setup(iconName: string, title?: any, size?: number, onPress?: () => voi
 jest.unmock('react-native');
 jest.unmock('./CrossButton');
 
+// Default export requires this type of mocking
+// jest.mock('react-native-stager', () => ({
+//   __esModule: true,
+//   Stage: 'View',
+//   StageButtons: 'View',
+//   StageProgress: 'View',
+//   default: 'View',
+// }));
+
 /**
    * Test component rendering. Properties of children might be tested by importing their type:
    *```
@@ -49,19 +58,6 @@ describe('components', () => {
         const wrapper = setup('home', 'home');
         const child = wrapper.root.findByProps({ mode: 'text' });
         expect(child.type).toEqual('View');
-      });
-    });
-
-    describe('With `iconName` but without `title` property provided', () => {
-      it('Component should render', () => {
-        const wrapper = setup('map', undefined);
-        expect(wrapper.toJSON()).toMatchSnapshot();
-      });
-
-      it('Should have `<FontAwesome.Button />` with `style` set to "container"', () => {
-        const wrapper = setup('map', undefined);
-        const child = wrapper.root.findByProps({ name: 'map' });
-        expect(child.props.style).toBe(styles.container);
       });
 
       it('<FontAwesomeButton /> onPress should be called', () => {

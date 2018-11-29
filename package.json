@@ -1,5 +1,5 @@
 {
-  "name": "@crossplatform/react-native-core",
+  "name": "react-native-cross-components",
   "version": "0.2.1",
   "description": "Beautiful React-Native components using RN Paper by Callstack",
   "main": "lib/index.js",
@@ -95,6 +95,7 @@
   },
   "dependencies": {
     "react-native-indicators": "^0.13.0",
+    "react-native-masked-text": "^1.9.2",
     "react-native-modal": "^7.0.0"
   }
 }

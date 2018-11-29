@@ -1,5 +1,5 @@
 module.exports = {
-  verbose: true,
+  verbose: false,
   preset: 'react-native',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testEnvironment: 'node',   
