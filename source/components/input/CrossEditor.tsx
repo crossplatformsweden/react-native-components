@@ -28,9 +28,9 @@ export interface ICrossEditorProps extends TextInputProps {
   mode?: 'flat' | 'outlined' | undefined;
   /**
    * Allows masking the input.
-   * 
+   *
    * https://github.com/benhurott/react-native-masked-text
-   * 
+   *
    * @example
    * ```
    <CrossEditor
@@ -44,14 +44,14 @@ let maskInput: any | null = null;
 
 /**
  * A text input supporting mask through {@see ICrossEditorProps.maskProps}.
- * 
+ *
  * When using mask the raw value will be exported in the `onChangeText` event, not the masked value.
- * 
+ *
  * Default {@see ICrossEditorProps.mode mode} is 'outlined'.
  *
  * Props are {@see ICrossEditorProps}
- * 
- * 
+ *
+ *
  * @example
  * ```
  <CrossEditor
@@ -88,26 +88,25 @@ export class CrossEditor extends React.Component<ICrossEditorProps> {
           customTextInput={TextInput}
           customTextInputProps={paperProps}
           onChangeText={() => {
-            //console.log('**** CrossEditor: onChangeText');
+            // console.log('**** CrossEditor: onChangeText');
             if (!maskInput || !maskInput.getRawValue) {
-              //console.log('TextInputMask missing getRawValue', maskInput);
+              // console.log('TextInputMask missing getRawValue', maskInput);
               return;
             }
 
             // @ts-ignore - bad map
             const rawValue = maskInput.getRawValue();
-            //console.log('CrossEditor rawValue = ', rawValue || 'nothing');
+            // console.log('CrossEditor rawValue = ', rawValue || 'nothing');
 
             if (maskedProps && maskedProps.onChangeText) {
               maskedProps.onChangeText(rawValue);
               return;
             }
-            
+
             if (paperProps.onChangeText) {
               paperProps.onChangeText(rawValue);
               return;
             }
-            
 
             // console.log('***** CrossEditor: no listener *****');
           }}
