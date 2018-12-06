@@ -69,39 +69,50 @@
 				<div class="tsd-comment tsd-typography">
 					<dl class="tsd-comment-tags">
 						<dt>description</dt>
-						<dd><p>Displays a modal with busy indicator (spinner) and message when <a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#isbusy">IBusyIndicatorProps.isBusy</a> is <code>true</code></p>
-							<p>Properties are <a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html">IBusyIndicatorProps</a></p>
+						<dd><p>Displays a modal with busy indicator (spinner) and message when <a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#isbusy">IBusyIndicatorProps.isBusy</a> is <code>true</code>.</p>
+							<p>Properties are <a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html">IBusyIndicatorProps</a>.</p>
+							<p>Customize the modal through <a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#modalprops">IBusyIndicatorProps.modalProps</a>.</p>
 							<p>Also supports cancelling the modal using properties
 								<a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#iscancelbuttonvisible">IBusyIndicatorProps.isCancelButtonVisible</a>,
 								<a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#canceltext">IBusyIndicatorProps.cancelText</a> and
 								<a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#oncancel">IBusyIndicatorProps.onCancel</a>.
 							This does however not hide the modal.</p>
-							<p>Modal with cancel</p>
 						</dd>
 						<dt>example</dt>
-						<dd><pre><code>&lt;CrossBusyIndicator
-key=<span class="hljs-string">"busy1"</span>
-testID=<span class="hljs-string">"busy1"</span>
-isBusy={this.state.isBusy}
-type={CrossSpinnerType.PacmanIndicator}
-isCancelButtonVisible={true}
-message=<span class="hljs-string">"Loading.."</span>
-onCancel={() =&gt; this.setState({ isBusy: false })}
-/&gt;</code></pre><p>Non cancellable and custom styles</p>
+						<dd><caption>Modal with cancel</caption>
+							<CrossBusyIndicator
+							isBusy={this.state.isBusy}
+							type='PacmanIndicator'
+							isCancelButtonVisible={true}
+							message="Loading.."
+							onCancel={() => this.setState({ isBusy: false })}
+							/>
 						</dd>
 						<dt>example</dt>
-						<dd><pre><code>&lt;CrossBusyIndicator
-key=<span class="hljs-string">"busy2"</span>
-testID=<span class="hljs-string">"busy2"</span>
-spinnerProps={{
-<span class="hljs-section">color: 'red',</span>
-<span class="hljs-section">type: CrossSpinnerType.WaveIndicator</span>
-}}
-messageStyle={{color: 'red'}}
-isBusy={this.state.isBusy2}
-isCancelButtonVisible={false}
-message=<span class="hljs-string">"Resistance is futile"</span>
-/&gt;</code></pre></dd>
+						<dd><caption>Non cancellable and custom styles</caption>
+							<CrossBusyIndicator
+							spinnerProps={{
+							color: 'red',
+							type: 'WaveIndicator'
+							}}
+							messageStyle={{color: 'red'}}
+							isBusy={this.state.isBusy2}
+							isCancelButtonVisible={false}
+							message="Resistance is futile"
+							/>
+						</dd>
+						<dt>example</dt>
+						<dd><caption>Customize modal props</caption>
+							<CrossBusyIndicator
+							modalProps={{
+							swipeDirection: 'up',
+							backdropColor: 'blue'
+							}}
+							isBusy={this.state.isBusy2}
+							isCancelButtonVisible={false}
+							message="Busy busy busy.."
+							/>
+						</dd>
 					</dl>
 				</div>
 			</section>
@@ -189,7 +200,7 @@ message=<span class="hljs-string">"Resistance is futile"</span>
 							<aside class="tsd-sources">
 								<p>Overrides Component.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/1172e05/source/components/modals/CrossBusyIndicator.tsx#L133">components/modals/CrossBusyIndicator.tsx:133</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/13362f6/source/components/modals/CrossBusyIndicator.tsx#L193">components/modals/CrossBusyIndicator.tsx:193</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -775,7 +786,7 @@ class Foo extends React.Component {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/1172e05/source/components/modals/CrossBusyIndicator.tsx#L139">components/modals/CrossBusyIndicator.tsx:139</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/13362f6/source/components/modals/CrossBusyIndicator.tsx#L199">components/modals/CrossBusyIndicator.tsx:199</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -793,7 +804,7 @@ class Foo extends React.Component {
 							<aside class="tsd-sources">
 								<p>Overrides Component.render</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/1172e05/source/components/modals/CrossBusyIndicator.tsx#L149">components/modals/CrossBusyIndicator.tsx:149</a></li>
+									<li>Defined in <a href="https://github.com/crossplatformsweden/react-native-components/blob/13362f6/source/components/modals/CrossBusyIndicator.tsx#L209">components/modals/CrossBusyIndicator.tsx:209</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span></h4>
@@ -983,6 +994,15 @@ class Foo extends React.Component {
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html" class="tsd-kind-icon">IBusy<wbr>Indicator<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_components_modals_crossbusyindicator_.imodalprops.html" class="tsd-kind-icon">IModal<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_components_modals_crossbusyindicator_.html#animationconfig" class="tsd-kind-icon">Animation<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_components_modals_crossbusyindicator_.html#orientation" class="tsd-kind-icon">Orientation</a>
 					</li>
 				</ul>
 			</nav>
