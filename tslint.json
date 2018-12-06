@@ -1,4 +1,5 @@
 {
+  "jsRules": {},
   "rules": {
     "member-access": false,
     "member-ordering": [

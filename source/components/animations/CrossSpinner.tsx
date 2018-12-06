@@ -22,17 +22,16 @@ import { Colors } from '../../styles';
  * @export
  * @enum {string}
  */
-export enum CrossSpinnerType {
-  BallIndicator = 'BallIndicator',
-  BarIndicator = 'BarIndicator',
-  DotIndicator = 'DotIndicator',
-  MaterialIndicator = 'MaterialIndicator',
-  PacmanIndicator = 'PacmanIndicator',
-  PulseIndicator = 'PulseIndicator',
-  SkypeIndicator = 'SkypeIndicator',
-  UIActivityIndicator = 'UIActivityIndicator',
-  WaveIndicator = 'WaveIndicator',
-}
+export type CrossSpinnerType =
+  | 'BallIndicator'
+  | 'BarIndicator'
+  | 'DotIndicator'
+  | 'MaterialIndicator'
+  | 'PacmanIndicator'
+  | 'PulseIndicator'
+  | 'SkypeIndicator'
+  | 'UIActivityIndicator'
+  | 'WaveIndicator';
 
 /**
  * Properties for the {@link CrossSpinner} component

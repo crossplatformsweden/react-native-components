@@ -8,7 +8,16 @@ import _ from 'lodash';
 import styles, { Colors } from '../../styles';
 
 /**
- * Properties for the {@link CrossButton} component
+ * Properties for the {@link CrossButton} component.
+ *
+ * Note the difference between {@link buttonStyle} and the regular {@link style} property.
+ *
+ * Remarks: react-native-paper is currently missing the option to customize `fontSize`.
+ *
+ * {@link iconName} is for a {@link https://fontawesome.com/v4.7.0/icons/ FontAwesome v4 icon}.
+ *
+ * {@link mode} is 'text'
+ *
  * @typedef ICrossButtonProps
  * @type ICrossButtonProps
  */
@@ -69,9 +78,11 @@ export interface ICrossButtonProps {
 /**
  * A custom button that displays as an Paper Button with icon or just an icon if {@link ICrossButtonProps.title} is not supplied.
  *
- * Remarks: all icons are {@link https://fontawesome.com/v4.7.0/icons/ FontAwesome v4}.
+ * Remarks:
  *
- * Remark: default appearence is "text", see {@link ICrossButtonProps.mode}
+ * * All icons are {@link https://fontawesome.com/v4.7.0/icons/ FontAwesome v4}.
+ * * react-native-paper is currently missing the option to customize `fontSize`.
+ * * Default appearence is "text", see {@link ICrossButtonProps.mode}
  *
  * Properties are {@link ICrossButtonProps}
  */

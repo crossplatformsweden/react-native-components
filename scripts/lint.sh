@@ -14,6 +14,6 @@ prettier **/*.json --write
 #prettier **/*.graphql --write
 
 echo "****** TSLINT ******"
-tslint -p ./tsconfig.json --fix
+tslint 'source/**/*.{ts,tsx}' --fix
 
 echo "******** scripts/lint.sh DONE ********"

@@ -28,13 +28,6 @@ jest.unmock('./CrossButton');
 //   default: 'View',
 // }));
 
-/**
-   * Test component rendering. Properties of children might be tested by importing their type:
-   *```
-      const btn = wrapper.root.findByType(Button); // or findByProps({ mode: 'text' });
-      expect(btn.props.title).toBe('child');
-      ```
-   */
 describe('components', () => {
   describe('<CrossButton />', () => {
     describe('`ICrossButtonProps` interface', () =>  {

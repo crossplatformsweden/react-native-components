@@ -18,7 +18,8 @@ import styles from '../../styles';
 import _ from 'lodash';
 
 /**
- * Properties for the {@link CrossLabel} component. Control component type using {@link isTitle}, {@link isCaption}, {@link isHeadline}, {@link isSubheading} and {@link isParagraph}.
+ * Properties for the {@link CrossLabel} component. Control component type using {@link isTitle}, {@link isCaption},
+ * {@link isHeadline}, {@link isSubheading} and {@link isParagraph}.
  *
  * Create an URL link using {@link onPressUrlTarget} and customize color using {@link linkColor}.
  *

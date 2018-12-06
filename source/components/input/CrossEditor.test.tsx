@@ -7,13 +7,6 @@ import { TextInputMaskProps } from 'react-native-masked-text';
 jest.unmock('react-native');
 jest.unmock('./CrossEditor');
 
-/**
-   * Test component rendering. Properties of children might be tested by importing their type:
-   *```
-      const btn = wrapper.root.findByType(Button); // or findByProps({ mode: 'text' });
-      expect(btn.props.title).toBe('child');
-      ```
-   */
 describe('components', () => {
   describe('<CrossEditor />', () => {
     describe('`ICrossEditorProps` interface', () => {

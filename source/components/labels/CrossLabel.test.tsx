@@ -15,13 +15,6 @@ import { Linking } from 'react-native';
 jest.unmock('react-native');
 jest.unmock('./CrossLabel');
 
-/**
-   * Test component rendering. Properties of children might be tested by importing their type:
-   *```
-      const btn = wrapper.root.findByType(Button); // or findByProps({ mode: 'text' });
-      expect(btn.props.title).toBe('child');
-      ```
-   */
 describe('components', () => {
   describe('<CrossLabel />', () => {
     describe('`ICrossLabelProps` interface', () => {
@@ -94,7 +87,7 @@ describe('components', () => {
     it('When `onPressUrlTarget` is url should be clickable', () => {
       const wrapper = TestRenderer.create(
         <CrossLabel
-          onPressUrlTarget="https://www.typescriptlang.org/"
+          onPressUrlTarget='https://www.typescriptlang.org/'
           style={{ marginTop: 20, marginBottom: 10 }}
         >
           Clickable link (onPressUrlTarget):

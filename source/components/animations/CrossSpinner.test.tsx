@@ -16,7 +16,7 @@ import {
 function setup(type?: CrossSpinnerType, size?: number, color?: string) {
   return TestRenderer.create(
     <CrossSpinner
-      type={type || CrossSpinnerType.BallIndicator}
+      type={type || 'BallIndicator'}
       color={color || 'blue'}
       size={size || 64}
     />
@@ -26,22 +26,11 @@ function setup(type?: CrossSpinnerType, size?: number, color?: string) {
 jest.unmock('react-native');
 jest.unmock('./CrossSpinner');
 
-/**
-   * Test component rendering. Properties of children might be tested by importing their type:
-   *```
-      const btn = wrapper.root.findByType(Button); // or findByProps({ mode: 'text' });
-      expect(btn.props.title).toBe('child');
-      ```
-   */
 describe('components', () => {
   describe('<CrossSpinner />', () => {
     describe('`CrossSpinnerType` enum', () => {
-      it('Should match snapshot', () => {
-        expect(CrossSpinnerType).toMatchSnapshot();
-      });
-
       it('Should have `BallIndicator` enum with value "BallIndicator"', () => {
-        expect(CrossSpinnerType.BallIndicator).toEqual('BallIndicator');
+        expect('BallIndicator').toEqual('BallIndicator');
       });
     });
 
@@ -51,7 +40,7 @@ describe('components', () => {
     });
 
     it('Should have <BallIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.BallIndicator);
+      const wrapper = setup('BallIndicator');
       const child = wrapper.root.findByType(BallIndicator);
       expect(child.props.size).toEqual(64);
     });
@@ -63,43 +52,43 @@ describe('components', () => {
     });
 
     it('Should have <DotIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.DotIndicator);
+      const wrapper = setup('DotIndicator');
       const child = wrapper.root.findByType(DotIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <PacmanIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.PacmanIndicator);
+      const wrapper = setup('PacmanIndicator');
       const child = wrapper.root.findByType(PacmanIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <PulseIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.PulseIndicator);
+      const wrapper = setup('PulseIndicator');
       const child = wrapper.root.findByType(PulseIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <SkypeIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.SkypeIndicator);
+      const wrapper = setup('SkypeIndicator');
       const child = wrapper.root.findByType(SkypeIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <UIActivityIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.UIActivityIndicator);
+      const wrapper = setup('UIActivityIndicator');
       const child = wrapper.root.findByType(UIActivityIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <WaveIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.WaveIndicator);
+      const wrapper = setup('WaveIndicator');
       const child = wrapper.root.findByType(WaveIndicator);
       expect(child.props.size).toEqual(64);
     });
 
     it('Should have <MaterialIndicator /> with size 64', () => {
-      const wrapper = setup(CrossSpinnerType.MaterialIndicator);
+      const wrapper = setup('MaterialIndicator');
       const child = wrapper.root.findByType(MaterialIndicator);
       expect(child.props.size).toEqual(64);
     });

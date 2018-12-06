@@ -1,6 +1,5 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { CrossSpinnerType } from '../animations/CrossSpinner';
 import _ from 'lodash';
 
 import CrossBusyIndicator, { IBusyIndicatorProps } from './CrossBusyIndicator';
@@ -14,7 +13,7 @@ function setup(options?: IBusyIndicatorProps | undefined) {
   const props: IBusyIndicatorProps = {
     isBusy: true,
     isCancelButtonVisible: true,
-    type: CrossSpinnerType.BallIndicator,
+    type: 'BallIndicator',
     onCancel: () => console.log('Cancelled'),
     ...options,
   };
@@ -36,7 +35,7 @@ describe('components', () => {
 
     it('Should not have <Modal /> when `isBusy` is `false`', () => {
       const { wrapper, props } = setup({
-        type: CrossSpinnerType.DotIndicator,
+        type: 'DotIndicator',
         isBusy: false,
         isCancelButtonVisible: true,
       });
@@ -48,12 +47,12 @@ describe('components', () => {
 
     it('Should have <CrossSpinner /> of type "DotIndicator"', () => {
       const { wrapper } = setup({
-        type: CrossSpinnerType.DotIndicator,
+        type: 'DotIndicator',
         isBusy: true,
         isCancelButtonVisible: true,
       });
       const child = wrapper.root.findByProps({
-        type: CrossSpinnerType.DotIndicator,
+        type: 'DotIndicator',
       });
       expect(child).toBeDefined();
     });
@@ -69,7 +68,7 @@ describe('components', () => {
       const onCalled = () => (called = !called);
 
       const { wrapper } = setup({
-        type: CrossSpinnerType.DotIndicator,
+        type: 'DotIndicator',
         isBusy: true,
         isCancelButtonVisible: true,
         onCancel: onCalled,

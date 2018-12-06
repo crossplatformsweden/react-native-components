@@ -32,10 +32,9 @@ export interface ICrossEditorProps extends TextInputProps {
    * https://github.com/benhurott/react-native-masked-text
    *
    * @example
-   * ```
-   <CrossEditor
-    label='Mobile'
-    maskProps={{ type: 'cel-phone' }} />```
+   * <CrossEditor
+   *   label='Mobile'
+   *   maskProps={{ type: 'cel-phone' }} />
    */
   maskProps?: TextInputMaskProps | undefined;
 }
@@ -53,11 +52,9 @@ let maskInput: any | null = null;
  *
  *
  * @example
- * ```
- <CrossEditor
-  label='Mobile'
-  maskProps={{ type: 'cel-phone' }} />
- ```
+ * <CrossEditor
+ *   label='Mobile'
+ *   maskProps={{ type: 'cel-phone' }} />
  */
 export class CrossEditor extends React.Component<ICrossEditorProps> {
   constructor(props: ICrossEditorProps) {

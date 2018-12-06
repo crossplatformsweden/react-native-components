@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   StyleProp,
   ViewStyle,
-  TextStyle
+  TextStyle,
 } from 'react-native';
 import { Colors } from '../../styles';
 import Modal from 'react-native-modal';
@@ -99,36 +99,30 @@ export interface IBusyIndicatorProps {
  * {@link IBusyIndicatorProps.onCancel}.
  * This does however not hide the modal.
  *
- * Modal with cancel
- * @example
+ * @example <caption>Modal with cancel</caption>
+ *  <CrossBusyIndicator
+ *         key="busy1"
+ *         testID="busy1"
+ *         isBusy={this.state.isBusy}
+ *         type={CrossSpinnerType.PacmanIndicator}
+ *         isCancelButtonVisible={true}
+ *         message="Loading.."
+ *         onCancel={() => this.setState({ isBusy: false })}
+ *       />
  *
- ```
-  <CrossBusyIndicator
-          key="busy1"
-          testID="busy1"
-          isBusy={this.state.isBusy}
-          type={CrossSpinnerType.PacmanIndicator}
-          isCancelButtonVisible={true}
-          message="Loading.."
-          onCancel={() => this.setState({ isBusy: false })}
-        />
-```
-* Non cancellable and custom styles
-* @example
-```
-        <CrossBusyIndicator
-          key="busy2"
-          testID="busy2"
-          spinnerProps={{
-            color: 'red',
-            type: CrossSpinnerType.WaveIndicator
-          }}
-          messageStyle={{color: 'red'}}
-          isBusy={this.state.isBusy2}
-          isCancelButtonVisible={false}
-          message="Resistance is futile"
-        />
-```
+ * @example <caption>Non cancellable and custom styles</caption>
+ *       <CrossBusyIndicator
+ *          key="busy2"
+ *          testID="busy2"
+ *          spinnerProps={{
+ *            color: 'red',
+ *            type: CrossSpinnerType.WaveIndicator
+ *          }}
+ *          messageStyle={{color: 'red'}}
+ *          isBusy={this.state.isBusy2}
+ *          isCancelButtonVisible={false}
+ *          message="Resistance is futile"
+ *        />
  */
 export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
   constructor(props: IBusyIndicatorProps) {
@@ -171,18 +165,14 @@ export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
           >
             <View style={[styles.columnContentTopCenter]}>
               <CrossSpinner
-                type={this.props.type || CrossSpinnerType.MaterialIndicator}
+                type={this.props.type || 'MaterialIndicator'}
                 style={styles.spinner}
                 {...this.props.spinnerProps}
               />
             </View>
 
             <View style={[styles.columnContentTopCenter]}>
-              <Text
-                style={
-                    [styles.textSpinner, this.props.messageStyle]
-                }
-              >
+              <Text style={[styles.textSpinner, this.props.messageStyle]}>
                 {this.props.message || ''}
               </Text>
               {this.props.isCancelButtonVisible ? (
