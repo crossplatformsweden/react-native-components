@@ -175,7 +175,7 @@ Non-cancellable and custom styles for `spinnerProps` and `messageStyle`:
 	/>
 ```
 
-Custom **[modal](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#modalProps)** props:
+Custom **[modal](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#modalprops)** props:
 
 ```typescript
        <CrossBusyIndicator
