@@ -245,7 +245,7 @@ export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
               {this.props.isCancelButtonVisible ? (
                 <TouchableOpacity onPress={this.onCancel}>
                   <Text
-                    testID="cancelText"
+                    testID='cancelText'
                     style={[
                       styles.textSpinner,
                       { color: Colors.CancelButton },
