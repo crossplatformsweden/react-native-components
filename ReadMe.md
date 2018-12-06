@@ -167,8 +167,6 @@ Non-cancellable and custom styles for `spinnerProps` and `messageStyle`:
 
 ```typescript
 	<CrossBusyIndicator
-		  key="busy2"
-		  testID="busy2"
 		  spinnerProps={{ color: 'red', type: 'WaveIndicator' }}
 		  messageStyle={{ color: 'red' }}
 		  isBusy={this.state.isBusy2}
@@ -176,6 +174,21 @@ Non-cancellable and custom styles for `spinnerProps` and `messageStyle`:
 		  message="Resistance is futile"
 	/>
 ```
+
+Custom **[modal](https://crossplatformsweden.github.io/react-native-components/interfaces/_components_modals_crossbusyindicator_.ibusyindicatorprops.html#modalProps)** props:
+
+```typescript
+       <CrossBusyIndicator
+          modalProps={{
+            swipeDirection: 'up',
+            backdropColor: 'blue'
+          }}
+          isBusy={this.state.isBusy2}
+          isCancelButtonVisible={false}
+          message="Busy busy busy.."
+        />
+```
+
 
 ### CrossSpinner
 [![](https://user-images.githubusercontent.com/2055622/28246049-e82c70e8-6a1b-11e7-93cc-8aa6d0d19867.gif)](https://github.com/n4kz/react-native-indicators)

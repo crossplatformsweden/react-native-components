@@ -1,9 +1,10 @@
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
+import TestRenderer, { ReactTestInstance } from 'react-test-renderer';
 import _ from 'lodash';
 
 import CrossBusyIndicator, { IBusyIndicatorProps } from './CrossBusyIndicator';
 import { TouchableOpacity, Text } from 'react-native';
+import Modal from 'react-native-modal';
 
 jest.unmock('react-native');
 jest.unmock('./CrossBusyIndicator');
@@ -77,6 +78,21 @@ describe('components', () => {
       const child = wrapper.root.findByType(TouchableOpacity);
       child.props.onPress();
       expect(called).toBeTruthy();
+    });
+
+    it('Modal should have "swipeDirection" with value "up"', () => {
+      const { wrapper } = setup({
+        type: 'DotIndicator',
+        isBusy: true,
+        isCancelButtonVisible: true,
+        modalProps: {
+          swipeDirection: 'up',
+        },
+      });
+
+      const child = wrapper.root.findByType(Modal)
+        .children[0] as ReactTestInstance;
+      expect(child.props.swipeDirection).toBe('up');
     });
   });
 });

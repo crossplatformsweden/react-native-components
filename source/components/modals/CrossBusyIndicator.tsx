@@ -16,6 +16,57 @@ import {
 } from '../animations/CrossSpinner';
 import styles from '../../styles';
 
+export type AnimationConfig = string | { from: Object; to: Object };
+
+export type Orientation =
+  | 'portrait'
+  | 'portrait-upside-down'
+  | 'landscape'
+  | 'landscape-left'
+  | 'landscape-right';
+
+/**
+ * Representation of react-native-modal props. All props except `isVisible` and `children` from:
+ *
+ * https://github.com/react-native-community/react-native-modal#available-props
+ */
+export interface IModalProps {
+  animationIn?: AnimationConfig;
+  animationInTiming?: number;
+  animationOut?: AnimationConfig;
+  animationOutTiming?: number;
+  avoidKeyboard?: boolean;
+  backdropColor?: string;
+  backdropOpacity?: number;
+  backdropTransitionInTiming?: number;
+  backdropTransitionOutTiming?: number;
+  useNativeDriver?: boolean;
+  deviceHeight?: number;
+  deviceWidth?: number;
+  hideModalContentWhileAnimating?: boolean;
+  onModalShow?: () => void;
+  onModalHide?: () => void;
+  onBackButtonPress?: () => void;
+  onBackdropPress?: () => void;
+  onSwipe?: () => void;
+  swipeThreshold?: number;
+  style?: StyleProp<ViewStyle>;
+  swipeDirection?: 'up' | 'down' | 'left' | 'right';
+  scrollTo?: (e: any) => void;
+  scrollOffset?: number;
+  scrollOffsetMax?: number;
+  supportedOrientations?: Orientation[];
+  onDismiss?: () => void;
+  onShow?: () => void;
+  hardwareAccelerated?: boolean;
+  onOrientationChange?: (orientation: 'portrait' | 'landscape') => void;
+  presentationStyle?:
+    | 'fullScreen'
+    | 'pageSheet'
+    | 'formSheet'
+    | 'overFullScreen';
+}
+
 /**
  * Describes the props for {@link CrossBusyIndicator}
  *
@@ -85,13 +136,21 @@ export interface IBusyIndicatorProps {
    * See {@link ICrossSpinnerProps}
    */
   spinnerProps?: ICrossSpinnerProps | undefined;
+  /**
+   * Optional properties to customize the modal. All props except `isVisible` and `children` from
+   *
+   * https://github.com/react-native-community/react-native-modal#available-props
+   */
+  modalProps?: IModalProps | undefined;
 }
 
 /**
  * @description
- * Displays a modal with busy indicator (spinner) and message when {@link IBusyIndicatorProps.isBusy} is `true`
+ * Displays a modal with busy indicator (spinner) and message when {@link IBusyIndicatorProps.isBusy} is `true`.
  *
- * Properties are {@link IBusyIndicatorProps}
+ * Properties are {@link IBusyIndicatorProps}.
+ *
+ * Customize the modal through {@link IBusyIndicatorProps.modalProps}.
  *
  * Also supports cancelling the modal using properties
  * {@link IBusyIndicatorProps.isCancelButtonVisible},
@@ -101,10 +160,8 @@ export interface IBusyIndicatorProps {
  *
  * @example <caption>Modal with cancel</caption>
  *  <CrossBusyIndicator
- *         key="busy1"
- *         testID="busy1"
  *         isBusy={this.state.isBusy}
- *         type={CrossSpinnerType.PacmanIndicator}
+ *         type='PacmanIndicator'
  *         isCancelButtonVisible={true}
  *         message="Loading.."
  *         onCancel={() => this.setState({ isBusy: false })}
@@ -112,16 +169,25 @@ export interface IBusyIndicatorProps {
  *
  * @example <caption>Non cancellable and custom styles</caption>
  *       <CrossBusyIndicator
- *          key="busy2"
- *          testID="busy2"
  *          spinnerProps={{
  *            color: 'red',
- *            type: CrossSpinnerType.WaveIndicator
+ *            type: 'WaveIndicator'
  *          }}
  *          messageStyle={{color: 'red'}}
  *          isBusy={this.state.isBusy2}
  *          isCancelButtonVisible={false}
  *          message="Resistance is futile"
+ *        />
+ *
+ * @example <caption>Customize modal props</caption>
+ *       <CrossBusyIndicator
+ *          modalProps={{
+ *            swipeDirection: 'up',
+ *            backdropColor: 'blue'
+ *          }}
+ *          isBusy={this.state.isBusy2}
+ *          isCancelButtonVisible={false}
+ *          message="Busy busy busy.."
  *        />
  */
 export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
@@ -144,6 +210,7 @@ export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
     return (
       <View testID={this.props.testID || '1'}>
         <Modal
+          {...this.props.modalProps}
           style={
             this.props.modalStyle
               ? [styles.absoluteCentered, this.props.modalStyle]
@@ -178,7 +245,7 @@ export class CrossBusyIndicator extends React.Component<IBusyIndicatorProps> {
               {this.props.isCancelButtonVisible ? (
                 <TouchableOpacity onPress={this.onCancel}>
                   <Text
-                    testID='cancelText'
+                    testID="cancelText"
                     style={[
                       styles.textSpinner,
                       { color: Colors.CancelButton },
