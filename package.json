@@ -3,6 +3,7 @@
   "version": "0.2.4",
   "description": "Beautiful React-Native components using RN Paper by Callstack",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "dev": "yarn install-globals && yarn lint",
     "install-globals": "yarn global add typescript tslint prettier codecov",
@@ -26,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crossplatformsweden/react-native-core.git"
+    "url": "git+https://github.com/crossplatformsweden/react-native-components.git"
   },
   "keywords": [
     "react-native",
@@ -37,9 +38,9 @@
   "author": "thomashagstrom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/crossplatformsweden/react-native-core/issues"
+    "url": "https://github.com/crossplatformsweden/react-native-components/issues"
   },
-  "homepage": "https://github.com/crossplatformsweden/react-native-core#readme",
+  "homepage": "https://github.com/crossplatformsweden/react-native-components#readme",
   "devDependencies": {
     "@babel/runtime": "^7.1.5",
     "@expo/vector-icons": "^6.3.1",
@@ -73,8 +74,6 @@
     "react-native": "^0.57.5",
     "react-native-paper": "^2.2.4",
     "react-native-typescript-transformer": "^1.2.10",
-    "react-navigation": "^2.18.2",
-    "react-navigation-material-bottom-tabs": "^0.4.0",
     "react-test-renderer": "^16.5.2",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
@@ -86,7 +85,7 @@
     "typescript": "^3.1.6"
   },
   "peerDependencies": {
-    "react-native-paper": "^2.2.4"
+    "react-native-paper": "~2.2.x"
   },
   "husky": {
     "hooks": {

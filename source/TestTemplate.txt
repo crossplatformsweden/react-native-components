@@ -4,18 +4,6 @@ import CrossButton, { ICrossButtonProps } from './CrossButton';
 import TestRenderer from 'react-test-renderer';
 import { styles } from '../../styles';
 
-function setup(iconName: string, title?: any, size?: number, onPress?: () => void) {
-  return TestRenderer.create(
-    <CrossButton
-      iconName={iconName}
-      title={title}
-      color="blue"
-      onPress={onPress || jest.fn()}
-      size={size || 64}
-    />
-  );
-}
-
 jest.unmock('react-native');
 jest.unmock('./CrossButton');
 
@@ -41,26 +29,36 @@ describe('components', () => {
       });
     })
 
-    describe('With `title` and `iconName` properties provided', () => {
+    describe('Component with these props', () => {
       it('Component should render', () => {
         const wrapper = setup('home', 'home');
         expect(wrapper.toJSON()).toMatchSnapshot();
       });
 
-      it('Should have paper <Button />', () => {
+      it('Should have <Button />', () => {
         const wrapper = setup('home', 'home');
         const child = wrapper.root.findByProps({ mode: 'text' });
         expect(child.type).toEqual('View');
       });
 
-      it('<FontAwesomeButton /> onPress should be called', () => {
+      it('When Button.onPress function called', () => {
         let called = false;
         const onCalled = () => called = !called;
 
-        const wrapper = setup('map', undefined, undefined, onCalled);
+        const wrapper = TestRenderer.create(<MapComponent onCallback={onCalled} />);
         const child = wrapper.root.findByProps({ name: 'map' });
         child.props.onPress();
         expect(called).toBeTruthy();
+      });
+
+      it('When async Button.onPress is state expected', async (done) => {
+        const wrapper = TestRenderer.create(<CognitoLogin />);
+        const child = wrapper.root.findByProps({ title: 'ButtonTitle' });
+        await child.props.onPress();
+        const result = _.get(wrapper, ['root', 'instance', 'state', 'stateProperty']);
+
+        expect(result).toBe('ExpectedResult');
+        done();
       });
     });
   });
