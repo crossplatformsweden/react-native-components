@@ -14,10 +14,14 @@ New package name: `react-native-cross-components`
 
 ## Install
 Install with [react-native-paper](https://github.com/callstack/react-native-paper) if you don't already have it.
+Install with [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) if you don't already have it.
+
 
 ```bash
 	npm i react-native-paper 
 	npm i react-native-cross-component
+  npm i react-native-vector-icons
+  react-native link
 ```
 
 Or if you're hanging with the cool kids
@@ -25,6 +29,8 @@ Or if you're hanging with the cool kids
 ```bash
 	yarn add react-native-paper 
 	yarn add react-native-cross-component
+  yarn add react-native-vector-icons
+  react-native link
 ```
 
 ### Important Icons! 
