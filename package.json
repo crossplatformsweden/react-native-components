@@ -1,6 +1,6 @@
 {
   "name": "react-native-cross-components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Beautiful React-Native components using RN Paper by Callstack",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -57,7 +57,6 @@
     "@types/react-native-fbsdk": "^0.6.2",
     "@types/react-native-google-signin": "^0.12.3",
     "@types/react-native-indicators": "^0.13.1",
-    "@types/react-native-vector-icons": "^4.6.3",
     "@types/react-navigation": "^2.0.21",
     "@types/react-navigation-material-bottom-tabs": "^0.3.0",
     "@types/react-test-renderer": "^16.0.2",
