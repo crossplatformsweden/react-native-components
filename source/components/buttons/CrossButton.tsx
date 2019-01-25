@@ -93,6 +93,7 @@ export class CrossButton extends React.Component<ICrossButtonProps> {
       <View style={this.props.style ? this.props.style : styles.container}>
         {_.isNil(this.props.title) && !_.isNil(this.props.iconName) ? (
           <FontAwesome.Button
+            testID='FontAwesomeButton'
             {...this.props}
             style={this.props.iconStyle || styles.container as ViewStyle}
             onPress={() => {

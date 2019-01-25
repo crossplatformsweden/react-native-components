@@ -47,7 +47,7 @@ If you're **not** using [Expo](https://www.expo.io/):
 ## Documentation
 See our GitHub Pages generated from code comments. This documentation is also available as intellisense / auto complete.
 
-* **[API Documnentation](https://crossplatformsweden.github.io/react-native-components/)**
+* **[API Documentation](https://crossplatformsweden.github.io/react-native-components/)**
 
 The **[styles](https://crossplatformsweden.github.io/react-native-components/modules/_styles_.html)** used by this library are exported for your convenience.
 

@@ -23,6 +23,7 @@ exports[`components <CrossButton /> With \`iconName\` but without \`title\` prop
         "justifyContent": "space-between",
       }
     }
+    testID="FontAwesomeButton"
   />
 </View>
 `;

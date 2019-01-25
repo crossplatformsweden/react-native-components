@@ -19,33 +19,34 @@ These are some of the common use components [Crossplatform](https://www.crosspla
 [![Twitter Follow](https://img.shields.io/twitter/follow/crossplatformse.svg?style=social)](https://twitter.com/crossplatformse)
 
 ## Table of Contents
+
 - [Crossplatform React-Native](#crossplatform-react-native)
-  * [Table of Contents](#table-of-contents)
-  * [Install](#install)
-  * [Can not run ShellScript](#can-not-run-shellscript)
+  - [Table of Contents](#table-of-contents)
+  - [Install](#install)
+  - [Can not run ShellScript](#can-not-run-shellscript)
 - [Tools](#tools)
-  * [Java](#java)
-  * [Git](#git)
-    + [Git Credential Manager](#git-credential-manager)
-  * [Node](#node)
-  * [Yarn](#yarn)
-  * [Visual Studio Code](#visual-studio-code)
+  - [Java](#java)
+  - [Git](#git)
+    - [Git Credential Manager](#git-credential-manager)
+  - [Node](#node)
+  - [Yarn](#yarn)
+  - [Visual Studio Code](#visual-studio-code)
 - [Scripts](#scripts)
-  * [yarn dev](#yarn-dev)
-  * [yarn read-sh](#yarn-read-sh)
-  * [yarn install-globals](#yarn-install-globals)
-  * [yarn lint](#yarn-lint)
-  * [yarn build](#yarn-build)
-  * [yarn build-watch](#yarn-build-watch)
-  * [yarn start](#yarn-start)
-  * [yarn test-watch](#yarn-test-watch)
-  * [yarn test](#yarn-test)
-  * [yarn docs](#yarn-docs)
-  * [npm-version](#npm-version)
+  - [yarn dev](#yarn-dev)
+  - [yarn read-sh](#yarn-read-sh)
+  - [yarn install-globals](#yarn-install-globals)
+  - [yarn lint](#yarn-lint)
+  - [yarn build](#yarn-build)
+  - [yarn build-watch](#yarn-build-watch)
+  - [yarn start](#yarn-start)
+  - [yarn test-watch](#yarn-test-watch)
+  - [yarn test](#yarn-test)
+  - [yarn docs](#yarn-docs)
+  - [npm-version](#npm-version)
 - [Debugging](#debugging)
 - [Release](#release)
-  * [Publish new version](#publish-new-version)
-    + [Publish GitHub documentation](#publish-github-documentation)
+  - [Publish new version](#publish-new-version)
+    - [Publish GitHub documentation](#publish-github-documentation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -253,28 +254,37 @@ Use VS Code's debugging capabilities to maintain a effective development cycle.
 And finally Jest Test debugging:
 
 ```json
-    	{
-            "type": "node",
-            "request": "launch",
-            "name": "Jest All",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
-            "args": [
-                "--runInBand"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Jest Current File",
-            "program": "${workspaceRoot}/node_modules/jest/bin/jest",
-            "args": [
-                "${file}"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
+({
+  "name": "Debug Jest Tests",
+  "type": "node",
+  "request": "launch",
+  "runtimeArgs": [
+    "--inspect-brk",
+    "${workspaceRoot}/node_modules/.bin/jest",
+    "--runInBand",
+    "--collectCoverage=false"
+  ],
+  "args": ["test", "--runInBand", "--no-cache", "--env=jsdom"],
+  "console": "integratedTerminal",
+  "internalConsoleOptions": "neverOpen",
+  "port": 9229
+},
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Jest Current File",
+  "program": "${workspaceRoot}/node_modules/jest/bin/jest",
+  "runtimeArgs": [
+    "--inspect-brk",
+    "${workspaceRoot}/node_modules/.bin/jest",
+    "--runInBand",
+    "--collectCoverage=false"
+  ],
+  "args": ["${file}", "--no-cache", "--env=jsdom"],
+  "console": "integratedTerminal",
+  "internalConsoleOptions": "neverOpen",
+  "port": 9229
+})
 ```
 
 # Release

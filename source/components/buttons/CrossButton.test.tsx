@@ -13,7 +13,7 @@ function setup(
     <CrossButton
       iconName={iconName}
       title={title}
-      color='blue'
+      color="blue"
       onPress={onPress || jest.fn()}
       size={size || 64}
     />
@@ -85,12 +85,14 @@ describe('components', () => {
         expect(child.props.style).toBe(styles.container);
       });
 
-      it('<FontAwesomeButton /> onPress should be called', () => {
+      it('<FontAwesome.Button /> onPress should be called', () => {
         let called = false;
         const onCalled = () => (called = !called);
 
         const wrapper = setup('map', undefined, undefined, onCalled);
-        const child = wrapper.root.findByProps({ name: 'map' });
+        const child = wrapper.root.findByProps({
+          testID: 'FontAwesomeButton',
+        });
         child.props.onPress();
         expect(called).toBeTruthy();
       });
