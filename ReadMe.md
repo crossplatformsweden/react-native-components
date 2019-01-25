@@ -13,41 +13,37 @@ Previous package name: `@crossplatform/react-native-components`
 New package name: `react-native-cross-components`
 
 ## Install
-Install with [react-native-paper](https://github.com/callstack/react-native-paper) if you don't already have it.
-Install with [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) if you don't already have it.
-
-
-```bash
-	npm i react-native-paper 
-	npm i react-native-cross-component
-  npm i react-native-vector-icons
-  react-native link
-```
-
-Or if you're hanging with the cool kids
-
-```bash
-	yarn add react-native-paper 
-	yarn add react-native-cross-component
-  yarn add react-native-vector-icons
-  react-native link
-```
-
-### Important Icons! 
-
-When using [Expo](https://www.expo.io/) icons are bundled. When ejected you need to install these yourself.
+When using [Expo](https://www.expo.io/) icons and Paper are bundled.
 
 Note that version of [**React-Native-Vector-Icons**](https://github.com/oblador/react-native-vector-icons) is bound by [Expo](https://www.expo.io) for compatibility.
 
 The iconset used is currently [FontAwesome v4 icons](https://fontawesome.com/v4.7.0/icons/). Ability to customize which iconset is used might be added. 
 
-If you're **not** using [Expo](https://www.expo.io/):
+### Native
+Install with [react-native-paper](https://github.com/callstack/react-native-paper) and [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) if you don't already have them.
 
 ```bash
-	npm i react-native-vector-icons@4.5.0 
+	npm i react-native-cross-components
+	npm i react-native-paper
+	npm i react-native-vector-icons
+	react-native link
 ```
+
 ```bash
-	yarn add react-native-vector-icons@4.5.0
+	yarn add react-native-cross-components
+	yarn add react-native-paper
+	yarn add react-native-vector-icons
+	react-native link
+```
+
+### Expo prev CRNA
+
+```bash
+	npm i react-native-cross-components
+```
+
+```bash
+	yarn add react-native-cross-components
 ```
 
 ## Documentation
@@ -82,7 +78,11 @@ See **[Components](#components)** below for examples
 [![Twitter Follow](https://img.shields.io/twitter/follow/crossplatformse.svg?style=social)](https://twitter.com/crossplatformse)
 
 ## Table of Contents
-- [Crossplatform React-Native Components](#crossplatform-react-native-components)
+  * [[Show me Components!](#components)](#-show-me-components----components-)
+  * [Install](#install)
+    + [Native](#native)
+    + [Expo prev CRNA](#expo-prev-crna)
+  * [Documentation](#documentation)
   * [Components](#components)
     + [CrossButton](#crossbutton)
     + [CrossBusyIndicator](#crossbusyindicator)
