@@ -4594,9 +4594,9 @@ react-native-modal@^7.0.0:
     prop-types "^15.6.1"
     react-native-animatable "^1.2.4"
 
-react-native-paper@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.2.4.tgz#78cede681b587eed70c483acbec262bf2de82931"
+react-native-paper@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.6.1.tgz#33faa24b341dfc446a8dd77ced07ea0dcdd6a164"
   dependencies:
     "@callstack/react-theme-provider" "^1.0.7"
     color "^2.0.1"

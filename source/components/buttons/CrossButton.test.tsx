@@ -13,7 +13,7 @@ function setup(
     <CrossButton
       iconName={iconName}
       title={title}
-      color="blue"
+      color='blue'
       onPress={onPress || jest.fn()}
       size={size || 64}
     />
